@@ -1965,6 +1965,7 @@
         </phrase_list>
     </dialog>
     <dialog id="bar_dolg_zastava_talk">
+        <precondition>bar_dialogs.bar_dolg_zastava_talk</precondition>
         <phrase_list>
             <phrase id="214">
                 <text>bar_dolg_zastava_talk_214</text>
@@ -1975,33 +1976,39 @@
             </phrase>
             <phrase id="21111">
                 <text>bar_dolg_zastava_talk_21111</text>
-                <next>21</next>
+                <next>21112</next>
+            </phrase>
+            <phrase id="21112">
+                <text>bar_dolg_zastava_talk_21112</text>
+                <next>211</next>
+                <next>212</next>
+                <next>213</next>
+                <next>21113</next>
+            </phrase>
+            <phrase id="21113">
+                <text>bar_dolg_zastava_talk_21113</text>
             </phrase>
             <phrase id="212">
+                <dont_has_info>bar_dolg_zastava_talk_info2</dont_has_info>
                 <text>bar_dolg_zastava_talk_212</text>
+                <give_info>bar_dolg_zastava_talk_info2</give_info>
                 <action>bar_dialogs.locate_bar_dolg</action>
                 <next>2121</next>
             </phrase>
             <phrase id="2121">
                 <text>bar_dolg_zastava_talk_2121</text>
-                <next>21211</next>
-            </phrase>
-            <phrase id="21211">
-                <text>bar_dolg_zastava_talk_21211</text>
-                <next>21</next>
+                <next>21111</next>
             </phrase>
             <phrase id="213">
+                <dont_has_info>bar_dolg_zastava_talk_info3</dont_has_info>
                 <text>bar_dolg_zastava_talk_213</text>
+                <give_info>bar_dolg_zastava_talk_info3</give_info>
                 <action>bar_dialogs.locate_bar_arena</action>
                 <next>2131</next>
             </phrase>
             <phrase id="2131">
                 <text>bar_dolg_zastava_talk_2131</text>
-                <next>21311</next>
-            </phrase>
-            <phrase id="21311">
-                <text>bar_dolg_zastava_talk_21311</text>
-                <next>21</next>
+                <next>21111</next>
             </phrase>
             <phrase id="0">
                 <text>bar_dolg_zastava_talk_0</text>
@@ -2023,7 +2030,9 @@
                 <next>214</next>
             </phrase>
             <phrase id="211">
+                <dont_has_info>bar_dolg_zastava_talk_info1</dont_has_info>
                 <text>bar_dolg_zastava_talk_211</text>
+                <give_info>bar_dolg_zastava_talk_info1</give_info>
                 <action>bar_dialogs.locate_bar_bar</action>
                 <next>2111</next>
             </phrase>

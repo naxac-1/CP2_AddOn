@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding="windows-1251"?>
 
 <game_information_portions>
+	<info_portion id="bar_dolg_zastava_talk_info1" />
+	<info_portion id="bar_dolg_zastava_talk_info2" />
+	<info_portion id="bar_dolg_zastava_talk_info3" />
 	<info_portion id="bar_dolg_zastava_about_zastava_done" />
 	<info_portion id="bar_dolg_zastava_story_done" />
 	<info_portion id="bar_bar_visitors_14_story_done" />

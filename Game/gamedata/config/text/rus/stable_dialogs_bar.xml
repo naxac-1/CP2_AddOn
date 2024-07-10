@@ -1268,23 +1268,23 @@
 	<string id="bar_dolg_zastava_talk_21111">
 		<text>Спасибо за информацию.</text>
 	</string>
+	<string id="bar_dolg_zastava_talk_21112">
+		<text>Что-то ещё?</text>
+	</string>
+	<string id="bar_dolg_zastava_talk_21113">
+		<text>Нет, это всё, спасибо!</text>
+	</string>
 	<string id="bar_dolg_zastava_talk_212">
 		<text>Ты сказал здесь база Долг. Подскажи, как туда пройти.</text>
 	</string>
 	<string id="bar_dolg_zastava_talk_2121">
 		<text>Недалеко от Арены, я отметил тебе на карте.</text>
 	</string>
-	<string id="bar_dolg_zastava_talk_21211">
-		<text>Спасибо за информацию.</text>
-	</string>
 	<string id="bar_dolg_zastava_talk_213">
 		<text>Ты сказал здесь есть Арена. Можешь подсказать где она?</text>
 	</string>
 	<string id="bar_dolg_zastava_talk_2131">
 		<text>Как выйдешь из ангара с пробитой крышей сразу выйдешь к ней, я тебе отмечу на карте.</text>
-	</string>
-	<string id="bar_dolg_zastava_talk_21311">
-		<text>Спасибо за информацию.</text>
 	</string>
 	<string id="bar_dolg_zastava_talk_214">
 		<text>Спасибо за информацию.</text>

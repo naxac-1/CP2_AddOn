@@ -491,3 +491,11 @@ function locate_bar_dolg(actor,npc)
 		level.map_add_object_spot(obj.id, "green_location", "bar_voronin_name")
 	end
 end
+function bar_dolg_zastava_talk(actor,npc)
+	if Actor:has_info("bar_dolg_zastava_talk_info1")
+		and Actor:has_info("bar_dolg_zastava_talk_info2")
+		and Actor:has_info("bar_dolg_zastava_talk_info3")
+		then return false
+	end
+	return true
+end
