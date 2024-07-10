@@ -404,6 +404,9 @@
 	<article id="zastava_commander_eliminate_lager_descr" name="eliminate_lager" article_type="task">
 		<text>zastava_commander_eliminate_lager_descr</text>
 	</article>
+	<article id="zastava_commander_eliminate_lager_1_descr" name="eliminate_lager" article_type="task">
+		<text>zastava_commander_eliminate_lager_1_descr</text>
+	</article>
 	
 	
 	<!-- tasks for wolf  -->
@@ -490,4 +493,8 @@
 	<article id="dan_monster_part_descr" name="monster_part" article_type="task">
 		<texture x="2100" y="2700" width="50" height="50">ui\ui_icon_equipment</texture>
 		<text>dan_monster_part_descr_text</text>
+	</article>
+	<article id="dan_monster_part_1_descr" name="monster_part" article_type="task">
+		<texture x="2650" y="3000" width="50" height="50">ui\ui_icon_equipment</texture>
+		<text>dan_monster_part_1_descr_text</text>
 	</article>
