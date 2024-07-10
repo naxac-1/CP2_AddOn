@@ -49,11 +49,11 @@ local mtlFlags = {
 	flSlowDown				= {2147483648, "замедляет движение"}
 }
 
-function show_debug_static()
-	local obj = level.get_target_obj()
+function show_debug_static(ob)
+	local obj = ob or level.get_target_obj()
 	if obj then
 		add_wnd()
-		show_obj_info(obj)
+		show_obj_info(obj, ob==nil)
 		return
 	end
 
@@ -93,7 +93,7 @@ function add_wnd()
 	end
 end
 
-function show_obj_info(obj)
+function show_obj_info(obj, look_on_obj)
 	local obj_id = obj:id()
 	local pos = obj:position()
 	local angle = obj:direction()
@@ -112,13 +112,14 @@ function show_obj_info(obj)
 					"%c[default]game vertex %c[gray]"..tostring( obj:game_vertex_id() ).."\\n"..
 					"%c[default]direction: %c[gray]"..string.format("%s, %s, %s", angle.x, angle.y, angle.z).."\\n"
 				--	"%c[default]rotation: %c[gray]"..tostring( angle ).."(rad), "..tostring( math.deg(angle) ).."(grad)\\n"..
-	if obj.get_visual_name then
-		local vis = string.gsub(obj:get_visual_name(), "\\", "/")
+
+	if obj.get_visual_name and sys_ini:line_exist(obj:section(), "visual") then
+		local vis = string.gsub(tostring(obj:get_visual_name()), "\\", "/")
 		text = text.."%c[default]visual name: %c[gray]"..vis.."\\n"
 	end
 
 	local el = level.get_target_element()
-	if el then
+	if el and look_on_obj then
 		text = text.."%c[default]target bone id:  %c[gray]"..tostring(el).."\\n"..
 					"%c[default]target bone name:  %c[gray]"..(obj:get_bone_name_by_id(el) or "nil").."\\n"
 	end
@@ -180,7 +181,7 @@ function show_obj_info(obj)
 		local t = naxac_netpk.get_object_flags_names(data.object_flags)
 		text = text.."%c[yellow]~~~~~~~ NET PACKET INFO ~~~~~~~\\n"..
 					"%c[default]object_flags: %c[gray]"..tostring(data.object_flags).."\\n"..
-					"      "..table.concat(t, ", ").."\\n"..
+				--	"      "..table.concat(t, ", ").."\\n"..
 					"%c[default]spawn_story_id: %c[gray]"..tostring(data.spawn_story_id).."\\n"..
 					"%c[default]custom_data:\\n"..
 					"%c[gray]    "..( data.custom_data:gsub("\\","/"):gsub("[\n\r]+", "\\n    ") ).."\\n"
