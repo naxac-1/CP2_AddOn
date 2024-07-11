@@ -103,10 +103,10 @@ function parse_names( s )
     return t
 end
 
-function r_spawns(spawn_ini, section, line, sectSpawnProps, respawn_name)
+function r_spawns(spawn_ini, section, line, sectSpawnProps, respawn_name, override_section)
 	local t
-	if sys_ini:section_exist( respawn_name..".override" ) and sys_ini:line_exist( respawn_name..".override", line ) then
-		t = parse_names( sys_ini:r_string( respawn_name..".override", line ) )
+	if override_section and sys_ini:line_exist( override_section, line ) then
+		t = parse_names( sys_ini:r_string( override_section, line ) )
 	elseif spawn_ini:line_exist( section, line ) then
 		t = parse_names( spawn_ini:r_string( section, line ) )
 	else
@@ -603,16 +603,23 @@ local amk_respawner_control={}
 local amk_named_respawner_control={}
 
 function init_respawn_params(obj)
-	amk_respawner_control[obj:name()] = obj
+	local respawn_name = obj:name()
+
+	amk_respawner_control[respawn_name] = obj
 	-- Вычитываем настройки спауна
 	local ini = obj:spawn_ini()
 	if not ini:section_exist(section_name) then
 		return  
 	end
 
-	obj.respawn_section = r_spawns(ini, section_name, "respawn_section", obj.sectSpawnProps, obj:name())  
+	local override_section = respawn_name..".override"
+	if not sys_ini:section_exist( override_section ) then
+		override_section = nil
+	end
+
+	obj.respawn_section = r_spawns(ini, section_name, "respawn_section", obj.sectSpawnProps, respawn_name, override_section)  
 	if obj.respawn_section == nil then
-		abort("RESPAWN: [%s] field 'respawn_section' doesn't exist.", obj:name())
+		abort("RESPAWN: [%s] field 'respawn_section' doesn't exist.", respawn_name)
 	end
 
 	obj.spawned_goes_online = ini:r_bool_ex(section_name, "spawned_goes_online", nil)
@@ -627,18 +634,22 @@ function init_respawn_params(obj)
 	if obj.min_count > obj.max_count and
 		obj.max_count ~= -1 
 	then
-		abort("RESPAWN: [%s] min_count > max_count", obj:name())
+		abort("RESPAWN: [%s] min_count > max_count", respawn_name)
 	end
 	--' FOR DEBUG ONLY, please don't forget to delete
 	--'if obj.max_count > 0 then
 	--'	obj.min_count = obj.max_count
 	--'end
 
-	obj.max_spawn = ini:r_float_ex(section_name, "max_spawn", 1)
+	if override_section and sys_ini:line_exist( override_section, "max_spawn" ) then
+		obj.max_spawn = sys_ini:r_float(override_section, "max_spawn")
+	else
+		obj.max_spawn = ini:r_float_ex(section_name, "max_spawn", 1)
+	end
 
 	local mn, mx = r_2nums(ini, section_name, "idle_spawn")
 	if not mn then
-		abort("RESPAWN: [%s] field 'idle_spawn' doesn't exist.", obj:name())
+		abort("RESPAWN: [%s] field 'idle_spawn' doesn't exist.", respawn_name)
 	end
 	-- check "once" or <0
 	obj.idle_spawn_min = idle_spawn_preset[mn] or tonumber(mn) or def_idle_spawn_min
@@ -669,7 +680,7 @@ function init_respawn_params(obj)
 	end
 
 	-- Для сбора статистики сохраняем указатель на респавнер
-	respawners[obj:name()] = obj
+	respawners[respawn_name] = obj
 	if obj.parent ~= nil then
 		respawners_by_parent[obj.parent] = obj
 	end
