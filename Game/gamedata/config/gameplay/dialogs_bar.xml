@@ -1401,7 +1401,7 @@
             <phrase id="2">
                 <precondition>bar_dialogs.lisyi_klad_precond</precondition>
                 <dont_has_info>bar_kruglov_follow_actor</dont_has_info>
-                <has_info>bar_darklab_document_gain</has_info>
+                <has_info>bar_darklab_document_done</has_info>
                 <next>21</next>
             </phrase>
             <phrase id="21">
@@ -1438,13 +1438,13 @@
             <phrase id="1">
                 <precondition>bar_dialogs.lisyi_klad_precond</precondition>
                 <has_info>agroprom_military_case_have</has_info>
-                <dont_has_info>bar_darklab_document_gain</dont_has_info>
+                <dont_has_info>bar_darklab_document_done</dont_has_info>
                 <next>11</next>
             </phrase>
             <phrase id="7">
                 <precondition>bar_dialogs.lisyi_klad_precond</precondition>
                 <dont_has_info>agroprom_military_case_have</dont_has_info>
-                <dont_has_info>bar_darklab_document_gain</dont_has_info>
+                <dont_has_info>bar_darklab_document_done</dont_has_info>
                 <dont_has_info>bar_kruglov_follow_actor</dont_has_info>
                 <dont_has_info>bar_x16_documents_done</dont_has_info>
                 <dont_has_info>bar_deactivate_radar_done</dont_has_info>
@@ -4445,6 +4445,7 @@
             </phrase>
             <phrase id="17213">
                 <text>bar_bar_barmen_start_17213</text>
+                <disable_info>bar_darklab_document_gain</disable_info>
                 <give_info>bar_x16_documents_start</give_info>
                 <next>172131</next>
             </phrase>

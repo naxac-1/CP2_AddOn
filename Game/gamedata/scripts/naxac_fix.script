@@ -1,15 +1,17 @@
 -- -*- mode: lua; encoding: windows-1251 -*-
+function fix_145()
+	if Actor:has_info("bar_darklab_document_gain")
+		and Actor:has_info("bar_x16_documents_start")
+	then
+		Actor:disable_info_portion("bar_darklab_document_gain")
+	end
+end
 function fix_144()
 	if AI:object("bar_zastava_dogs_lair_1") == nil then
 		AI:create(spawn_ids.bar_zastava_dogs_lair_1)
 	end
 	local obj = AI:object("mil_tonnel_restrictor")
 	if obj then AI:release(obj, true) end
-	if Actor:dont_has_info("bar_darklab_document_gain")
-		and Actor:has_info("bar_darklab_document_done")
-	then
-		Actor:give_info_portion("bar_darklab_document_gain")
-	end
 end
 function fix_143()
 	xr_gulag.reinit_gulag_npc_all("val_escort")
