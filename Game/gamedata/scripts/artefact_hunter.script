@@ -15,20 +15,20 @@ local scient = {
 	["dolg_scientific_outfit"]		= 0.3,	-- Научный костюм ДОЛГА и его модификации
 	["freedom_scientific_outfit"]	= 0.2,	-- Научный костюм Свободы и его модификации
 	["monolit_scientific_outfit"]	= 0.2,	-- Научный костюм Монолита и его модификации
-	["nebo_scientific_outfit"]		= 0.0,	--НАУЧНЫЙ КОСТЮМ ЧИСТОГО НЕБА и его модификации
+	["nebo_scientific_outfit"]		= 0.0,	-- НАУЧНЫЙ КОСТЮМ ЧИСТОГО НЕБА и его модификации
 	["protection_outfit"]			= 0.0,	-- Комбинезон ССП-99М "Вега" и его модификации
 	["ecolog_outfit"]				= 0.0,	-- ОБЫЧНЫЙ КОСТЮМ УЧЕННОГО и его модификации
-	["nano_outfit"]					= 0.0,
-	["nano_suit"]					= 0.0,
-	["exo_knight_outfit"]			= 0.0,
-	["exo_doktor_outfit"]			= 0.0,
+	["nano_outfit"]					= 0.0,	-- Нанозащитный костюм "Стальной Крыс"
+	["nano_suit"]					= 0.0,	-- Модернизированный нанокостюм
+	["exo_knight_outfit"]			= 0.0,	-- Экзоскелет "Дон Кихот"
+	["exo_doktor_outfit"]			= 0.0,	-- Экзоскелет Чёрного Доктора
 	-- Akill begin
 	["gagarin_outfit"]				= 0.0,	-- Бронекостюм Гагарин
 	["gagarin_outfit_m1"]			= 0.0,	-- Мод. Гагарин
 	["voshod_outfit"]				= 0.0,	-- Бронекостюм Восход
 	-- Akill end
-	["seva_scient_outfit"]			= 0.0,
-	["exo_scientist_outfit"]		= 0.0   
+	["seva_scient_outfit"]			= 0.0,	-- Модифицированный комбинезон "СЕВА+"
+	["exo_scientist_outfit"]		= 0.0   -- Научный экзоскелет
 }
 
 local artefacts = {}

@@ -15,9 +15,9 @@ local min_trade_condition          = 0.1		-- неписи не покупают 
 local trade_ini = ini_file("misc\\trade\\trade_quest_items.ltx")
 
 local clr = {
-	red = 0,
-	blue = 1,
-	green = 2,
+	red    = 0,
+	blue   = 1,
+	green  = 2,
 	orange = 3,
 }
 -- ВАЖНО! цвет с индексом 0, т.е. red используется движком для раскраски по умолчанию 
