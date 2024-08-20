@@ -92,6 +92,10 @@
 		<texture>ui_hud_icon_thirst</texture>
 	</thirst_static>
 
+	<low_charge_static x="0" y="0" width="48" height="64" stretch="1">
+		<texture>ui_hud_icon_low_charge</texture>
+	</low_charge_static>
+
 #include "ui\restore_indicators_16.xml"
 
 	<flashing_icons>
