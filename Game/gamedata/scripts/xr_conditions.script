@@ -691,7 +691,7 @@ end
 -- Akill begin
 function killed_by_knife(actor, npc)
 	local t = db.storage[npc:id()].death
-	if t ~= nil and t.killer == actor:id() then
+	if t ~= nil and (t.killer == actor:id() or t.killer == npc:id()) then
 		if actor_active_item and actor_active_item:section() == "wpn_knife" then
 			return true
 		end
