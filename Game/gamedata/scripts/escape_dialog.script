@@ -998,3 +998,6 @@ function spawn_monstrov()
 	AI:create_free("fracture_strong",vector():set(313.89013671885,15.640267372131,6.0813541412354),571947,139)
 end
 
+function tolik_taynik()
+	treasure_manager.give_random_treasure(false, level.name())
+end

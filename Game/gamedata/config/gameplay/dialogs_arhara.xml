@@ -392,84 +392,131 @@
 
 
 <dialog id="tolik_info">
-<dont_has_info>esc_petruha_toz_start</dont_has_info>
-<dont_has_info>tolik_info_done</dont_has_info>
-<phrase_list>
-<phrase id="0">
-<text>tolik_info_0</text>
-<next>1</next>
-</phrase>
-<phrase id="1">
-<text>tolik_info_1</text>
-<action>sak.add_new_bar_to_atp</action>
-<next>2</next>
-</phrase>
-<phrase id="2">
-<text>tolik_info_2</text>
-<next>3</next>
-</phrase>
-<phrase id="3">
-<text>tolik_info_3</text>
-<next>4</next>
-</phrase>
-<phrase id="4">
-<text>tolik_info_4</text>
-<next>5</next>
-</phrase>
-<phrase id="5">
-<text>tolik_info_5</text>
-<next>6</next>
-</phrase>
-<phrase id="6">
-<text>tolik_info_6</text> 
-<give_info>tolik_info_done</give_info>
-</phrase>
-</phrase_list>
+	<dont_has_info>esc_petruha_toz_start</dont_has_info>
+	<dont_has_info>tolik_info_done</dont_has_info>
+	<phrase_list>
+		<phrase id="0">
+			<text>tolik_info_0</text>
+			<next>1</next>
+		</phrase>
+		<phrase id="1">
+			<text>tolik_info_1</text>
+			<action>sak.add_new_bar_to_atp</action>
+			<next>2</next>
+			<next>21</next>
+			<next>211</next>
+		</phrase>
+		<phrase id="2">
+			<dont_has_info>arh_disk_start</dont_has_info>
+			<text>tolik_info_2</text>
+			<next>3</next>
+		</phrase>
+		<phrase id="21">
+			<has_info>seen_atp_for_test22</has_info>
+			<has_info>arh_disk_start</has_info>
+			<text>tolik_info_21</text>
+			<next>22</next>
+		</phrase>
+		<phrase id="211">
+			<dont_has_info>seen_atp_for_test22</dont_has_info>
+			<has_info>arh_disk_start</has_info>
+			<text>tolik_info_211</text>
+			<next>212</next>
+		</phrase>
+		<phrase id="212">
+			<text>tolik_info_212</text>
+			<next>4</next>
+		</phrase>
+		<phrase id="22">
+			<text>tolik_info_22</text>
+			<next>23</next>
+		</phrase>
+		<phrase id="23">
+			<text>tolik_info_23</text>
+			<next>24</next>
+		</phrase>
+		<phrase id="24">
+			<text>tolik_info_24</text>
+			<give_info>tolik_info_done</give_info>
+			<action>escape_dialog.tolik_taynik</action>
+			<next>25</next>
+		</phrase>
+		<phrase id="25">
+			<text>tolik_info_25</text>
+			<next>4</next>
+		</phrase>
+		<phrase id="3">
+			<text>tolik_info_3</text>
+			<next>4</next>
+		</phrase>
+		<phrase id="4">
+			<text>tolik_info_4</text>
+			<next>5</next>
+		</phrase>
+		<phrase id="5">
+			<text>tolik_info_5</text>
+			<next>6</next>
+		</phrase>
+		<phrase id="6">
+			<text>tolik_info_6</text> 
+			<give_info>tolik_info_done</give_info>
+		</phrase>
+	</phrase_list>
 </dialog> 
 
 
 <dialog id="arh_disk_nayty">
-<has_info>adrenalin_start</has_info>
-<dont_has_info>arh_disk_start</dont_has_info>
-<phrase_list>
-<phrase id="0">
-<text>arh_disk_nayty_0</text>
-<next>1</next>
-</phrase>
-<phrase id="1">
-<text>arh_disk_nayty_1</text>
-<next>2</next>
-</phrase>
-<phrase id="2">
-<text>arh_disk_nayty_2</text>
-<next>3</next>
-</phrase>
-<phrase id="3">
-<text>arh_disk_nayty_3</text>
-<next>4</next>
-</phrase>
-<phrase id="4">
-<text>arh_disk_nayty_4</text>
-<next>5</next>
-</phrase>
-<phrase id="5">
-<text>arh_disk_nayty_5</text>
-<next>6</next>
-<next>7</next>
-</phrase>
-<phrase id="6">
-<text>arh_disk_nayty_6</text> 
-<give_info>arh_disk_start</give_info>
-<give_info>info_atp_way_kordon</give_info>
-<action>arhara_dialog.spawn_burer_bar</action>
-<action>sak.add_new_bar_to_atp</action>
-<action>sak.add_new_atp_to_kordon</action>
-</phrase>
-<phrase id="7">
-<text>arh_disk_nayty_7</text>
-<action>dialogs.break_dialog</action>			
-</phrase>
-</phrase_list>
+	<has_info>adrenalin_start</has_info>
+	<dont_has_info>arh_disk_start</dont_has_info>
+	<phrase_list>
+		<phrase id="0">
+		<text>arh_disk_nayty_0</text>
+		<next>1</next>
+		</phrase>
+		<phrase id="1">
+		<text>arh_disk_nayty_1</text>
+		<next>2</next>
+		</phrase>
+		<phrase id="2">
+		<text>arh_disk_nayty_2</text>
+		<next>3</next>
+		</phrase>
+		<phrase id="3">
+		<text>arh_disk_nayty_3</text>
+		<next>4</next>
+		</phrase>
+		<phrase id="4">
+		<text>arh_disk_nayty_4</text>
+		<next>5</next>
+		</phrase>
+		<phrase id="5">
+		<text>arh_disk_nayty_5</text>
+		<next>6</next>
+		<next>61</next>
+		<next>7</next>
+		</phrase>
+		<phrase id="6">
+			<dont_has_info>tolik_info_done</dont_has_info>
+			<text>arh_disk_nayty_6</text> 
+			<give_info>arh_disk_start</give_info>
+			<give_info>info_atp_way_kordon</give_info>
+			<action>arhara_dialog.spawn_burer_bar</action>
+			<action>sak.add_new_bar_to_atp</action>
+			<action>sak.add_new_atp_to_kordon</action>
+		</phrase>
+		<phrase id="61">
+			<has_info>tolik_info_done</has_info>
+			<text>arh_disk_nayty_61</text>
+			<give_info>arh_disk_start</give_info>
+			<give_info>info_atp_way_kordon</give_info>
+			<action>arhara_dialog.spawn_burer_bar</action>
+			<action>sak.add_new_atp_to_kordon</action>
+		</phrase>
+		<phrase id="7">
+			<text>arh_disk_nayty_7</text>
+			<action>dialogs.break_dialog</action>			
+		</phrase>
+	</phrase_list>
 </dialog> 
 
 <dialog id="arh_disk_otd">
@@ -4584,50 +4631,67 @@
 
 
 <dialog id="vuxod_atp">
-<dont_has_info>vuxod_atp_start</dont_has_info>
-<has_info>kalinin_shnura_ok</has_info>
-<phrase_list>
-<phrase id="0">
-<text>vuxod_atp_0</text>
-<next>1</next>
-</phrase> 
-<phrase id="1">
-<text>vuxod_atp_1</text>
-<next>2</next>
-</phrase>
-<phrase id="2">
-<text>vuxod_atp_2</text>
-<next>3</next>
-</phrase>
-<phrase id="3">
-<text>vuxod_atp_3</text>
-<give_info>vuxod_atp_start</give_info>
-</phrase>
-</phrase_list>
+	<dont_has_info>vuxod_atp_start</dont_has_info>
+	<has_info>kalinin_shnura_ok</has_info>
+	<phrase_list>
+		<phrase id="0">
+			<text>vuxod_atp_0</text>
+			<next>1</next>
+		</phrase> 
+		<phrase id="1">
+			<text>vuxod_atp_1</text>
+			<next>2</next>
+			<next>21</next>
+		</phrase>
+		<phrase id="2">
+			<dont_has_info>info_atp_way_kordon</dont_has_info>
+			<text>vuxod_atp_2</text>
+			<next>3</next>
+		</phrase>
+		<phrase id="21">
+			<has_info>info_atp_way_kordon</has_info>
+			<text>vuxod_atp_21</text>
+			<next>22</next>
+		</phrase>
+		<phrase id="22">
+			<text>vuxod_atp_22</text>
+			<give_info>vuxod_atp_start</give_info>
+		</phrase>
+		<phrase id="3">
+			<text>vuxod_atp_3</text>
+			<give_info>vuxod_atp_start</give_info>
+		</phrase>
+	</phrase_list>
 </dialog>
 
 
 <dialog id="vuxod_atp1">
-<precondition>arhara_dialog.vuxod_atp_have</precondition>
-<dont_has_info>vuxod_atp_done</dont_has_info>
-<has_info>vuxod_atp_start</has_info>
-<phrase_list>
-<phrase id="0">
-<text>vuxod_atp1_0</text>
-<action>arhara_dialog.delete_trups</action>
-<next>1</next>
-</phrase> 
-<phrase id="1">
-<text>vuxod_atp1_1</text>
-<next>2</next>
-</phrase> 
-<phrase id="2">
-<text>vuxod_atp1_2</text>
-<give_info>vuxod_atp_done</give_info>
-<action>arhara_dialog.vuxod_atp_done</action>
-<action>sak.add_new_atp_to_svalka</action>
-</phrase>
-</phrase_list>
+	<precondition>arhara_dialog.vuxod_atp_have</precondition>
+	<dont_has_info>vuxod_atp_done</dont_has_info>
+	<has_info>vuxod_atp_start</has_info>
+	<phrase_list>
+		<phrase id="0">
+			<text>vuxod_atp1_0</text>
+			<give_info>vuxod_atp_done</give_info>
+			<action>arhara_dialog.vuxod_atp_done</action>
+			<action>arhara_dialog.delete_trups</action>
+			<next>1</next>
+		</phrase> 
+		<phrase id="1">
+			<text>vuxod_atp1_1</text>
+			<action>sak.add_new_atp_to_svalka</action>
+			<next>2</next>
+			<next>3</next>
+		</phrase> 
+		<phrase id="2">
+			<dont_has_info>info_atp_way_kordon</dont_has_info>
+			<text>vuxod_atp1_2</text>
+		</phrase>
+		<phrase id="3">
+			<has_info>info_atp_way_kordon</has_info>
+			<text>vuxod_atp1_3</text>
+		</phrase>
+	</phrase_list>
 </dialog>
 
 
