@@ -159,7 +159,7 @@ end
 check_tbl['snp_pda5'] = function ( obj )
 	if Actor:dont_has_info("snpt_pp1_have2") then
 		-- Прайм заболел
-		local se_obj = snp.object_by_section_offline("bibliofrend_talk_zaton")
+		local se_obj = AI:story_object(story_ids.bibliofrend_talk_zaton)
 		if se_obj then
 			AI:release(se_obj, true)
 		end
