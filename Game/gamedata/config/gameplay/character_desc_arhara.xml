@@ -9879,7 +9879,7 @@
 		<name>zemlyk_name</name>
 		<icon>ui_npc_zemlyk</icon>
 		<map_icon x="1" y="0"></map_icon>
-		<bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+		<bio>zemlyk_bio</bio>
 
 		<class>zemlyk</class>
 		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
@@ -10108,7 +10108,7 @@
 		<name>frits_name</name>
 		<icon>ui_npc_frits</icon>
 		<map_icon x="1" y="0"></map_icon>
-		<bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+		<bio>frits_bio</bio>
 
 		<class>frits</class>
 		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
@@ -10137,7 +10137,7 @@
 		<name>frits_name</name>
 		<icon>ui_npc_frits</icon>
 		<map_icon x="1" y="0"></map_icon>
-		<bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+		<bio>frits_bio</bio>
 
 		<class>gener_frits2</class>
 		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
@@ -11181,7 +11181,7 @@
 		<name>esc_trupak_antenna_name</name>
 		<icon>ui_npc_u_green_stalker_2</icon>
 		<map_icon x="0" y="0"></map_icon>
-		<bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+		<bio>sim_stalker_general_bio</bio>
 
 		<class>esc_trupak_antenna</class>
 		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
@@ -13145,7 +13145,7 @@
 		<name>lesnik_name</name>
 		<icon>ui_npc_lesnik</icon>
 		<map_icon x="1" y="0"></map_icon>
-		<bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+		<bio>lesnik_bio</bio>
 
 		<class>forest_lesnik</class>
 		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
