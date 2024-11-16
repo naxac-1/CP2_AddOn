@@ -19,9 +19,18 @@ local parent_by_story = {
 	[story_ids.Mil_Lukash]					= "freedom",			-- Лукаш
 	[story_ids.yan_general_ecolog]			= "ecolog",				-- Сахаров
 	[story_ids.stalker_green_zahar]			= "green",				-- Захар
+	[story_ids.amk_artem_kulinar]			= "kulinar",			-- Артём Кулинар
+	[story_ids.amk_vitek_voron]				= "voron",				-- Витёк Ворон
 	[story_ids.otshelnik]					= "otshelnik",			-- Отшельник
 	[story_ids.dyak]						= "dyak",				-- Дьяк
-	[story_ids.marsh_dan]					= "dan"					-- Дэн
+	[story_ids.marsh_dan]					= "dan",				-- Дэн
+	[story_ids.clear_sky_leader]			= "sviblov",			-- Свиблов
+	[story_ids.city_starshoy]				= "tumenskii",			-- Саня Тюменский
+	[story_ids.zemlyk]						= "zemlyk",				-- Земляк
+	[story_ids.kolmogor]					= "kolmogor",			-- Колмогор
+	[story_ids.pri_dimak]					= "dimak",				-- Димак
+	[story_ids.aaz_upi]						= "aaz",				-- Ааз
+	[story_ids.bibliofrend_talk_zaton]		= "bibliofrend"			-- Прайм
 }
 
 local story_by_parent = {}
