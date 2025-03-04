@@ -98,17 +98,15 @@ function options_dialog:UpdateControls()
 
 	opt:SetCurrentValues("key_binding")
 
-	self:UpdateDependControls()
+	self.current_r2_value = self.combo_r2:CurrentID()
+	self:UpdateDependControls(self.current_r2_value)
 	self:GameSetupMenuLoad()
 	self:OnDifficultyChanged()
 end
 
-function options_dialog:UpdateDependControls()
-	
-	self.current_r2_value	= self.combo_r2:CurrentID()
-
+function options_dialog:UpdateDependControls(current_value)
 	for i,j in pairs(self.m_preconditions_r2) do
-		j				(i, self.current_r2_value)
+		j				(i, current_value)
 	end
 end
 
@@ -159,9 +157,11 @@ function options_dialog:OnPresetChanged()
 end
 
 function options_dialog:OnR2changed()
-	self:UpdateDependControls()
+	local current_value = self.combo_r2:CurrentID()
+	self:UpdateDependControls(current_value)
 
-	if self.current_r2_value ~= self.combo_r2:CurrentID() then
+	if self.current_r2_value ~= current_value then
+		self.current_r2_value = current_value
 		self.need_restart_game = true
 	end
 end
@@ -191,7 +191,7 @@ function options_dialog:OnBtnAccept()
 	self:GameSetupMenuSave()
 
 	console:execute("cfg_save user.ltx")
-	
+
 	if self.need_restart_game then
 		self.message_box:Init("message_box_restart_game")
 		self:GetHolder():start_stop_menu(self.message_box,true)
