@@ -4,7 +4,7 @@
 File:  amk_mod .script
 copyright © AMK TEAM 2007-2008
 
-добавлена  fenechka by TAG
+добавлена fenechka by TAG
 
 --]]
 
@@ -193,7 +193,18 @@ end
 --'*******************************************************************************
 --'   **   **   **   **   **    **   **   **      NEWS_AMK          **   **   **   **   **    **   **   **   **
 --'*******************************************************************************
+local last_time = 0
+local fl_snow_now = false
+local showtime_dev = 0.029
 function show_news_queue(text, timeout, sender)
+	if timeout == nil then
+		timeout = math.random(1000, 3000)
+	end
+
+	local showtime = #text/showtime_dev
+	local show_now = (real_time_ms + showtime + timeout < last_time - 3000)
+						and not fl_snow_now
+
 	local tmp_news = {}
 	local f
 	while true do
@@ -208,28 +219,37 @@ function show_news_queue(text, timeout, sender)
 		table.insert( tmp_news, text )
 	end
 
-	if #tmp_news == 0 then return end
-
-	if timeout == nil then
-		timeout = math.random(1000, 3000)
+	if #tmp_news == 0 then
+		log("! [show_news_queue] Incorrect news string: %s", text)
+		return
 	end
-	local showtime = 7000
+
+	if (not show_now) and real_time_ms + timeout < last_time then
+		timeout = last_time - real_time_ms
+	end
+
 	for i, v in ipairs(tmp_news) do
-		news_manager.send_tip(v, timeout/1000, nil, showtime)
-	--	news_manager.send_tip(v, timeout/1000, sender, showtime)
-		timeout = timeout + showtime + math_random(1000, 2000)
+		showtime = #v/showtime_dev
+	--	news_manager.send_tip(v, timeout/1000, nil, showtime)
+		news_manager.send_tip(v, timeout/1000, sender, showtime)
+		timeout = timeout + showtime + math_random(1500, 2500)
+	end
+	if show_now then
+		fl_snow_now = true
+	else
+		last_time = real_time_ms + timeout
 	end
 end
 
 function show_news()
-	news_main.on_news()
-
 	start_game_timer("show_news",0,0,math_random(50,70))
 
 	local bl = amk.load_variable("blowout",-1)
 	if (bl > -1 and bl < 5) then return end
 
 	if sleep_manager.is_sleep_active() or news_main.isIsolatedLevel(level.name()) then return end
+
+	news_main.on_news()
 
 	-- вероятности поставлены по примерному количеству СМС в каждом файле
 	local news_text, sender
@@ -256,7 +276,8 @@ function show_news()
 		end
 	--	sender = "uniq"
 	end
-	this.show_news_queue(news_text, nil, sender)
+	this.show_news_queue(news_text)
+--	this.show_news_queue(news_text, nil, sender)
 end
 
 --'*******************************************************************************
@@ -2363,17 +2384,6 @@ function check_npc_in_hideout(npc,hide)
 	return not not_in_zone
 end
 
-function initial_spawn(action)
-	local fr=0
-	for i=0,amk_hideouts.anom_count-1,1 do
-		local sobj = AI:story_object(amk_hideouts.anom_sid0+i)
-		if not sobj then 
-			AI:create(i+amk_hideouts.anom_num0) 
-			fr=1
-		end
-	end
-	if fr==1 then create_anoms() end
-end
 
 function blowout_modif_arts()
 	local obj, b
@@ -2414,73 +2424,6 @@ function blowout_modif_arts()
 	amk.send_tip(msg, "Уборщик:", 5, 10, "nano")
 end
 
---'*******************************************************************************
---'   **   **   **   **   **    **   **   **       ANOMS SPAWN        **   **   **   **   **    **   **   **   
---'*******************************************************************************
-anomalies_state={}
-
-function remove_anoms()
-	amk.save_variable("blowout_anoms",string.rep(string.char(128),math_ceil(amk_hideouts.anom_count/7)))
-	update_anoms()
-end
-
-function create_anoms()
-	anomalies_state={}
-	for i=amk_hideouts.anom_sid0,amk_hideouts.anom_sid0+amk_hideouts.anom_count-1,1 do
-		anomalies_state[i]=math_random(0,1)==1
-	end
-	local str=pack_anoms(anomalies_state)
-	amk.save_variable("blowout_anoms",str)
-	update_anoms()
-end
-
-function update_anoms()
-	local anoms=amk.load_variable("blowout_anoms",string.rep(string.char(128),math_ceil(amk_hideouts.anom_count/7)))
-	anomalies_state=unpack_anoms(anoms)
-	for i=amk_hideouts.anom_sid0,amk_hideouts.anom_sid0+amk_hideouts.anom_count-1,1 do
-		local sobj=AI:story_object(i)
-		if sobj then
-			local obj=level.object_by_id(sobj.id)
-			if obj then
-				if anomalies_state[i] then
-					obj:enable_anomaly()
-				else
-					obj:disable_anomaly()
-				end
-			end
-		end
-    end
-end
-
--- anom_state[sid]==true для активнvх аномалий
-function pack_anoms(anom_state)
-	local str=""
-	for i=0,amk_hideouts.anom_count-1,7 do
-		local cval=128
-		local mul=1
-		for j=0,6,1 do
-			if anom_state[i+j+amk_hideouts.anom_sid0] then
-				cval=cval+mul
-			end
-		mul=mul*2
-		end
-    str=str..string.char(cval)
-	end
-	return str
-end
-
-function unpack_anoms(str)
-	local anom={}
-	for i=1,string.len(str),1 do
-		local cval=string.byte(string_sub(str,i,i))
-		local mul=1
-		for j=0,6,1 do
-			anom[(i-1)*7+j+amk_hideouts.anom_sid0]=bit_and(mul,cval)~=0
-			mul=mul*2
-		end
-	end
-	return anom
-end
 
 function blowout_type()
 	local blow_type = amk_hideouts.blowout_types[level.name()]
