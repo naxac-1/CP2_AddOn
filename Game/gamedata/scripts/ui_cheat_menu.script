@@ -692,7 +692,7 @@ function GetOutfitParams(section)
 		val = sys_ini:r_float(section, t.prop.."_protection")
 		if val~=0 then
 			val = val*100
-			txt = txt.."%c[white]• "..t.text.." "..(val<0 and "%c[red]" or "%c[green]+")..string_format("%d%%",val).."\\n"
+			txt = txt.."%c[white]• "..t.text.." "..(val<0 and "%c[red]" or "%c[green]+")..string_format("%d",val).."%\\n"
 		end
 	end
 
@@ -706,7 +706,7 @@ function GetOutfitParams(section)
 		val = sys_ini:r_float(section, "power_loss")
 		if val ~= 1 then
 			val = val*100 - 100
-			txt = txt.."%c[white]• Усталость: "..(val>0 and "%c[red]+" or "%c[green]")..string_format("%d%",val).."%\\n"
+			txt = txt.."%c[white]• Усталость: "..(val>0 and "%c[red]+" or "%c[green]")..string_format("%d",val).."%\\n"
 		end
 	end
 	if sys_ini:line_exist(section, "power_restore_speed") then
