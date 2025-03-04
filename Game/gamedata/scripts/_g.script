@@ -1864,6 +1864,16 @@ function need_show_condition(item)
 	return ( ( item:is_weapon() or item:is_outfit() ) and b ~= false ) or b == true
 end
 
+local upg_str = {"_kalibr", "_otdaca", "_ves", "_m1", "_m2", "_m3"}
+function is_upgraded(section)
+	for i, v in ipairs(upg_str) do
+		if string.find(section, "^.-("..v..")$") ~= nil then
+			return true
+		end
+	end
+	return false
+end
+
 function set_story_id( obj, sid )
 	AI:assign_story_id( nil, nil, obj.id, sid )
 end

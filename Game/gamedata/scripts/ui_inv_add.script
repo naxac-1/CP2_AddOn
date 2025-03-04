@@ -496,8 +496,10 @@ function on_create_cell_item( item )
 
 	-- рисуем шкалу состояния
 	if need_show_condition(item) then
+		local section = item:section()
+		local icn_h = sys_ini:r_u32(section, "inv_grid_height")
 		local x = 2
-		local y = 35 * sys_ini:r_u32(item:section(), "inv_grid_height") - 6
+		local y = 35 * icn_h - 6
 		local w = 30*kScreen
 		local h = 4
 
@@ -518,6 +520,15 @@ function on_create_cell_item( item )
 		local r = math.min( (1-cond)*510, 255 )
 		s:SetColor( GetARGB( 255, r, g, 0 ) )
 		b:AttachChild( s )
+------------------------------
+		if is_upgraded(section) then
+			local u = CUIStatic()
+			u:SetAutoDelete( true )
+			u:Init( "ui\\ui_upgrade_icon", 3*kScreen, 3, 11*kScreen, 11 )
+			u:SetStretchTexture( true )
+			st:AttachChild( u )
+		end
+------------------------------
 	end
 end
 ------------------------------------------------------------------------------------------
