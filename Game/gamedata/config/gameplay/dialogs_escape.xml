@@ -1691,22 +1691,6 @@
             <phrase id="1999">
                 <text>escape_trader_start_dialog_1999</text>
             </phrase>
-            <phrase id="199">
-                <text>escape_trader_start_dialog_199</text>
-                <action>escape_dialog.give_weapon_to_actor</action>
-                <action>escape_dialog.give_knife_to_actor</action>
-                <give_info>esc_trader_direct</give_info>
-                <give_info>tutorial_wounded_start</give_info>
-                <next>1999</next>
-            </phrase>
-            <phrase id="1111">
-                <text>escape_trader_start_dialog_1111</text>
-                <next>199</next>
-            </phrase>
-            <phrase id="111">
-                <text>escape_trader_start_dialog_111</text>
-                <next>1111</next>
-            </phrase>
             <phrase id="12">
                 <text />
                 <precondition>escape_dialog.is_tutorial</precondition>
@@ -1818,20 +1802,7 @@
             </phrase>
             <phrase id="3">
                 <text>escape_trader_start_dialog_3</text>
-                <!--<next>31</next>-->
                 <next>32</next>
-            </phrase>
-            <phrase id="31">
-                <text>escape_trader_start_dialog_31</text>
-                <action>dialogs.break_dialog</action>
-                <action>escape_dialog.run_tutorial_pda</action>
-                <give_info>esc_trader_newbie</give_info>
-                <give_info>esc_trader_tutorial_chosen</give_info>
-                <next>311</next>
-            </phrase>
-            <phrase id="311">
-                <text />
-                <action>dialogs.break_dialog</action>
             </phrase>
             <phrase id="32">
                 <text>escape_trader_start_dialog_32</text>
@@ -1839,7 +1810,6 @@
                 <give_info>esc_trader_tutorial_chosen</give_info>
                 <next>321</next>
             </phrase>
-
             <phrase id="33">
                 <text>escape_trader_start_dialog_33</text>
                 <next>331</next>				
@@ -1980,6 +1950,65 @@
                 <text>escape_trader_start_dialog_19111</text>
                 <action>escape_dialog.give_documents_reward</action>
                 <disable_info>esc_return</disable_info>
+                <next>19112</next>
+            </phrase>
+            <phrase id="19112">
+                <text>escape_trader_start_dialog_19112</text>
+                <next>19113</next>
+            </phrase>
+            <phrase id="19113">
+                <text>escape_trader_start_dialog_19113</text>
+                <next>19114</next>
+                <next>191141</next>
+            </phrase>
+            <phrase id="19114">
+                <has_info>seen_l41_darkscape_ogse</has_info>
+                <text>escape_trader_start_dialog_19114</text>
+                <next>19115</next>
+            </phrase>
+            <phrase id="191141">
+                <dont_has_info>seen_l41_darkscape_ogse</dont_has_info>
+                <text>escape_trader_start_dialog_191141</text>
+                <next>19115</next>
+            </phrase>
+            <phrase id="19115">
+                <text>escape_trader_start_dialog_19115</text>
+                <action>escape_dialog.give_documents_reward2</action>
+                <give_info>escape_trader_td_esc_way_info</give_info>
+                <next>19116</next>
+            </phrase>
+            <phrase id="19116">
+                <text>escape_trader_start_dialog_19116</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+	<dialog id="escape_trader_td_esc_way">
+		<dont_has_info>escape_trader_td_esc_way_info</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>escape_trader_td_esc_way_0</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>escape_trader_td_esc_way_1</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>escape_trader_td_esc_way_2</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>escape_trader_td_esc_way_3</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="5">
+                <text>escape_trader_td_esc_way_5</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>escape_trader_td_esc_way_6</text>
+                <action>escape_dialog.give_documents_reward2</action>
+                <give_info>escape_trader_td_esc_way_info</give_info>
             </phrase>
         </phrase_list>
     </dialog>

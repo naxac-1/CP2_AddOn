@@ -1,10 +1,18 @@
 [logic]
-active = sr_level_changer
+active = {+escape_trader_td_esc_way_info} sr_level_changer@2, sr_level_changer@1
 
-[sr_level_changer]
+[sr_level_changer@1]
 dest_game_vertex_id = 4139
 dest_level_vertex_id = 46210
 dest_position = -421.482116699219,0.987843751907349,637.761474609375
 dest_direction = 0,3.83972001075745,0
 pt_move_if_reject = val_way_if_reject_to_esc
+map_spot = level_changer3
+on_info = {+escape_trader_td_esc_way_info} sr_level_changer@2
+
+[sr_level_changer@2]
+dest_game_vertex_id = 4139
+dest_level_vertex_id = 46210
+dest_position = -421.482116699219,0.987843751907349,637.761474609375
+dest_direction = 0,3.83972001075745,0
 map_spot = level_changer3

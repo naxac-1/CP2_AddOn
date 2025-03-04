@@ -91,6 +91,7 @@
 		<actor_dialog>foto_ohota_end</actor_dialog>
 		<!-- Akill end -->
           <actor_dialog>escape_trader_factions</actor_dialog>
+		<actor_dialog>escape_trader_td_esc_way</actor_dialog>
 		<actor_dialog>sidor_known_art_dialog</actor_dialog>
 	</specific_character>
 	
