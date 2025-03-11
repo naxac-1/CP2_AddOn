@@ -1,4 +1,14 @@
 -- -*- mode: lua; encoding: windows-1251 -*-
+function fix_146()
+	local obj
+	for i, v in ipairs( {"val_kocherga", "sim_stalker_fraer"} ) do
+		obj = AI:object(v)
+		if obj and obj:alive() then
+			AI:release(obj, true)
+			AI:create( spawn_ids[v] )
+		end
+	end
+end
 function fix_145()
 	if Actor:has_info("bar_darklab_document_gain")
 		and Actor:has_info("bar_x16_documents_start")
