@@ -1,4 +1,10 @@
 -- -*- mode: lua; encoding: windows-1251 -*-
+function fix_147()
+	if Actor:has_info("escape_trader_td_esc_way_info") then
+		level_changers.create_level_changer( "lc_escape_to_darkvalley", true )
+		level_changers.create_level_changer( "lc_darkvalley_to_escape", true )
+	end
+end
 function fix_146()
 	local obj
 	for i, v in ipairs( {"val_kocherga", "sim_stalker_fraer"} ) do
