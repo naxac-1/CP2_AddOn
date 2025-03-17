@@ -775,7 +775,11 @@ function show_news(text, from, timeout, showtime, section)
 	table.insert(spammers, from)
 
 	text = "%c[gray2]"..from.."\\n%c[default]"..text
-	amk_mod.show_news_queue(text, timeout*1000)
+	if ( string.find(text, "\\n%c[gray2]", 1, true) ) ~= nil then
+		amk_mod.show_news_queue(text, timeout, section)
+	else
+		news_manager.send_tip(text, timeout, section, showtime*1000)
+	end
 
 	timer_last_showed = game_time_minutes
 end
@@ -2066,8 +2070,10 @@ function do_seen_monster()
 	if (b_ok == true) then
 		if (s_author ~= "") then
 			if microquest_created then
+				-- сообщение о микроквесте будем выводить независимо от очереди,
+				-- чтобы наверняка не потерялось после перезагрузки
 				text = "%c[gray2]"..s_author.."\\n%c[default]"..text
-				amk_mod.show_news_queue(text, math_random(timer_spawn, timer_spawn * 3)*1000, icon)
+				news_manager.send_tip(text, math_random(timer_spawn, timer_spawn * 3), icon, 7000)
 			elseif author_id then
 				do_news(text, s_author, math_random(timer_spawn, timer_spawn * 3), 7, icon, author_id, 1)
 			else
@@ -2135,7 +2141,7 @@ function miniquest_reward_news(tbl)
 		["who"] = rewarder,
 		["target"] = tbl[3]
 	}
-	amk_mod.show_news_queue("%c[gray]"..trader_name.."\\n%c[red_sms]"..format_text_pairs(text, t), nil, trader)
+	news_manager.send_tip("%c[gray]"..trader_name.."\\n%c[red_sms]"..format_text_pairs(text, t), 0, trader, 12000)
 end
 
 function on_wound(obj)
@@ -2726,13 +2732,25 @@ function on_offline_trade(npc, item)
 	end
 end
 
+local rspl_tmeout = -1
 function send_resupply(sobj)
 	local trader_name = reminder.get_npc_name(sobj)
 	local rnd_name = amk_names_lists.get_strings(true, "stalker")
 	local text = table.remove( news_data.resupply_msgs, math.random(#news_data.resupply_msgs) )
 	text = format_text_pairs( text, {rnd_npc = rnd_name} )
 	local sms = "%c[gray]"..trader_name.."\\n%c[default]"..text
-	amk_mod.show_news_queue(sms)
+
+	local timeout = 5
+	local tg = time_global()
+	local rnd_timer = math.random(60, 120) *1000
+	if tg < rspl_tmeout then
+		timeout = (rspl_tmeout - tg)/1000
+		rspl_tmeout = rspl_tmeout + rnd_timer
+	else
+		rspl_tmeout = tg + rnd_timer
+	end
+
+	news_manager.send_tip(sms, timeout, nil, 12000)
 end
 
 
