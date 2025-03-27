@@ -500,7 +500,7 @@ function se_smart_terrain:obj_accepts_smart_terrain( obj )
 			s = xr_logic.pick_section_from_condlist( db.actor_proxy, obj, condlist )
 
 			if s ~= nil then
-				if name == "none" then        
+				if name == "none" then  
 					return disagreed
 				elseif name == self:name() then
 					return agreed_exclusive
