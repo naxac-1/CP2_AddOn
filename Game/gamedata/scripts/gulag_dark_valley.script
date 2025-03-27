@@ -347,7 +347,7 @@ gulags.val_prisoner.job = function(sj, gname, gulag_type, squad, groups)
     -- за решеткой
     t = { section = "logic@" .. gname,
         squad = squad, group = groups[1],
-        in_rest = "", out_rest = gname .. "_jail_restr",
+        out_rest = gname .. "_jail_restr",
         online = true,
         predicate = p_predicate
     }
@@ -356,8 +356,8 @@ gulags.val_prisoner.job = function(sj, gname, gulag_type, squad, groups)
     -- свободен
     t = { section = "logic@" .. gname .. "_free",
         squad = squad, group = groups[1],
-        in_rest = "", out_rest = "",
         --online = true,
+		state = {1},
         predicate = p_predicate
     }
     table.insert(sj, t)
