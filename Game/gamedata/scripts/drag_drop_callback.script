@@ -32,7 +32,7 @@ function wait_db_click()
 end
 
 function on_key_press(dik, bind)
-	if bind ~= key_bindings.kWPN_FIRE then return end
+	if dik ~= DIK_keys.DIK_LMOUSE then return end
 	
 	if itemInFocus then
 		selItem = itemInFocus
@@ -50,7 +50,7 @@ function on_key_press(dik, bind)
 end
 
 function on_key_release(dik, bind)
-	if bind ~= key_bindings.kWPN_FIRE then return end
+	if dik ~= DIK_keys.DIK_LMOUSE then return end
 
 	if selItem and selItem ~= itemInFocus
 		and AI:object(selItem)
