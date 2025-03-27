@@ -1099,7 +1099,7 @@
 
 <!--<Ультрадетектор>-->
 <game_task id="otsh_pda" prio="0">
-	<title>otsh_pda</title>
+	<title>otsh_pda_0</title>
 	<objective>
 		<text>otsh_pda_0</text>
 		<icon>ui_iconsTotal_detector</icon>
