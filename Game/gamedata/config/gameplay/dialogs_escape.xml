@@ -1983,6 +1983,7 @@
         </phrase_list>
     </dialog>
 	<dialog id="escape_trader_td_esc_way">
+		<has_info>esc_trader_return</has_info>
 		<dont_has_info>escape_trader_td_esc_way_info</dont_has_info>
         <phrase_list>
             <phrase id="0">
