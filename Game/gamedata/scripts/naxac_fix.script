@@ -1,4 +1,13 @@
 -- -*- mode: lua; encoding: windows-1251 -*-
+function fix_148()
+	local obj = AI:object("val_prisoner_captive")
+	if obj and obj:alive()
+		and Actor:has_info("val_prisoner_door_unlocked")
+		and Actor:dont_has_info("val_prisoner_scene_end")
+	then
+		Actor:give_info_portion("val_prisoner_scene_end")
+	end
+end
 function fix_147()
 	if Actor:has_info("escape_trader_td_esc_way_info") then
 		level_changers.create_level_changer( "lc_escape_to_darkvalley", true )
