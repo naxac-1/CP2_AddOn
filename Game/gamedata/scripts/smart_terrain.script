@@ -1112,7 +1112,7 @@ function unregister_npc(npc)
 			if strn:clsid() == clsid.smart_terrain then
 				strn:unregister_npc(obj)
 			else
-				get_console():execute("load ~~~ smart_terrain.unregister_npc: Обнаружена привязка к несуществующему smart_terrain: "..obj:name()..", smart_terrain_id: "..tostring(strn_id)..". Привязка удалена.")
+				log("~ [smart_terrain.unregister_npc] Обнаружена привязка к несуществующему smart_terrain: %s, smart_terrain_id: %s. Привязка удалена.", obj:name(), tostring(strn_id))
 				obj:clear_smart_terrain()
 			end
 		end
