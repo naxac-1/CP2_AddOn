@@ -797,7 +797,7 @@
 		<text>Собрать ремнаборы</text>
 	</string>
 	<string id="otshelnik_prosba_2">
-		<text>otshelnik_prosba_2</text>
+		<text>Принести ремнаборы Отшельнику</text>
 	</string>
 	<string id="klad_labirint">
 		<text>У Лысого есть информация о кладе в Лабиринте. Клад должен быть где-то на его нижних уровнях, где много аномалий "Электра". Лысый обещал заплатить за всё, что я смогу найти.</text>
@@ -1785,7 +1785,7 @@
 		<text>Заполучить у Кулинара палёную водку</text>
 	</string>
 	<string id="kalinin_diversya_2">
-		<text>ggggggggggggggggggg</text>
+		<text>Найти схрон бандитов и положить в него палёнку</text>
 	</string>
 	<string id="kalinin_diversya_3">
 		<text>Вернуться к Калинину</text>
@@ -2311,9 +2311,6 @@
 	</string>
 	<string id="kontrik_vodka_1">
 		<text>Собрать водку и положить её в тайник контролёра</text>
-	</string>
-	<string id="kontrik_vodka_spot">
-		<text>Тайник контроллёра</text>
 	</string>
 	<string id="kill_predator">
 		<text>Забытый лес будто притягивает различных монстров. Там появилась очередная жуткая тварь, которую мне поручено убить. По сообщениям от Креста, страшные звуки доносятся с северо-восточной части леса.</text>

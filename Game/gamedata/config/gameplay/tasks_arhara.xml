@@ -35,7 +35,7 @@
 	</objective>
 	<objective>
 		<text>flamethrower_quest_task_6</text>
-		<map_location_type hint="mil_Svoboda_engineer">blue_location</map_location_type>
+		<map_location_type hint="flamethrower_quest_task_6">blue_location</map_location_type>
         <object_story_id>mil_Svoboda_engineer</object_story_id>
 		<infoportion_complete>game_over</infoportion_complete>
 	</objective>
@@ -56,7 +56,7 @@
 	</objective>
 	<objective>
 		<text>teleporter_2</text>
-		<map_location_type hint="crest_name">blue_location</map_location_type>
+		<map_location_type hint="teleporter_2">blue_location</map_location_type>
 		<object_story_id>puzir_crest</object_story_id>
 		<infoportion_complete>otan_aq</infoportion_complete>
 	</objective>
@@ -77,7 +77,7 @@
 	</objective>
 	<objective>
 		<text>qeast_b_2</text>
-		<map_location_type hint="crest_name">blue_location</map_location_type>
+		<map_location_type hint="qeast_b_2">blue_location</map_location_type>
 		<object_story_id>puzir_crest</object_story_id>
 		<infoportion_complete>otda</infoportion_complete>
 	</objective>
@@ -98,7 +98,7 @@
 	</objective>
 	<objective>
 		<text>qeast_q_1_2</text>
-		<map_location_type hint="crest_name">blue_location</map_location_type>
+		<map_location_type hint="qeast_q_1_2">blue_location</map_location_type>
 		<object_story_id>puzir_crest</object_story_id>
 		<infoportion_complete>otdan_q</infoportion_complete>
 	</objective>
@@ -119,7 +119,7 @@
 	</objective>
 	<objective>
 		<text>doc_tvar_02</text>
-		<map_location_type hint="esc_akim">blue_location</map_location_type>
+		<map_location_type hint="doc_tvar_02">blue_location</map_location_type>
 		<object_story_id>esc_akim</object_story_id>
 		<infoportion_complete>doc_tvar_done</infoportion_complete>
 	</objective>
@@ -140,7 +140,7 @@
 	</objective>
 	<objective>
 		<text>doc_4_2</text>
-		<map_location_type hint="esc_akim">blue_location</map_location_type>
+		<map_location_type hint="doc_4_2">blue_location</map_location_type>
 		<object_story_id>esc_akim</object_story_id>
 		<infoportion_complete>doc_otdan_q</infoportion_complete>
 	</objective>
@@ -161,7 +161,7 @@
 	</objective>
 	<objective>
 		<text>doc_3_2</text>
-		<map_location_type hint="esc_akim">blue_location</map_location_type>
+		<map_location_type hint="doc_3_2">blue_location</map_location_type>
 		<object_story_id>esc_akim</object_story_id>
 		<infoportion_complete>doc_otdan_s</infoportion_complete>
 	</objective>
@@ -182,7 +182,7 @@
 	</objective>
 	<objective>
 		<text>hand_zombie_2</text>
-		<map_location_type hint="esc_akim">blue_location</map_location_type>
+		<map_location_type hint="hand_zombie_2">blue_location</map_location_type>
 		<object_story_id>esc_akim</object_story_id>
 		<infoportion_complete>hand_otdan</infoportion_complete>
 	</objective>
@@ -203,7 +203,7 @@
 	</objective>
 	<objective>
 		<text>doc_2</text>
-		<map_location_type hint="esc_akim">blue_location</map_location_type>
+		<map_location_type hint="doc_2">blue_location</map_location_type>
 		<object_story_id>esc_akim</object_story_id>
 		<infoportion_complete>doc_otdan</infoportion_complete>
 	</objective>
@@ -224,7 +224,7 @@
 	</objective>
 	<objective>
 		<text>doc_2_2</text>
-		<map_location_type hint="esc_akim">blue_location</map_location_type>
+		<map_location_type hint="doc_2_2">blue_location</map_location_type>
 		<object_story_id>esc_akim</object_story_id>
 		<infoportion_complete>doc_otdan_p</infoportion_complete>
 	</objective>
@@ -247,7 +247,7 @@
 	</objective>
 	<objective>
 		<text>atp_propusk_2</text>
-		<map_location_type hint="agro_adrenalin">blue_location</map_location_type>
+		<map_location_type hint="atp_propusk_2">blue_location</map_location_type>
 		<object_story_id>agro_adrenalin</object_story_id>
 		<infoportion_complete>atp_propusk_done</infoportion_complete> 
 	</objective>
@@ -270,7 +270,7 @@
 	</objective>
 	<objective>
 		<text>baty_zadan_2</text>
-		<map_location_type hint="yan_saharov_name">blue_location</map_location_type>
+		<map_location_type hint="baty_zadan_2">blue_location</map_location_type>
 		<object_story_id>yan_general_ecolog</object_story_id>
 		<infoportion_complete>baty_zadanie_done</infoportion_complete> 
 	</objective>
@@ -292,7 +292,7 @@
 	</objective>
 	<objective>
 		<text>arhara_ekza_2</text>
-		<map_location_type hint="bar_voronin_name">blue_location</map_location_type>
+		<map_location_type hint="arhara_ekza_2">blue_location</map_location_type>
 		<object_story_id>bar_dolg_general_voronin</object_story_id>
 		<infoportion_complete>arhara_ekza_done</infoportion_complete> 
 	</objective>
@@ -314,7 +314,7 @@
 	</objective>
 	<objective>
 		<text>atp_shurup_propusk_2</text>
-		<map_location_type hint="mil_Svoboda_engineer_name">blue_location</map_location_type>
+		<map_location_type hint="atp_shurup_propusk_2">blue_location</map_location_type>
 		<object_story_id>mil_Svoboda_engineer</object_story_id>
 		<infoportion_complete>atp_propusk_shurup_done</infoportion_complete> 
 	</objective>
@@ -336,7 +336,7 @@
 	</objective>
 	<objective>
 		<text>ugrum_plaer_2</text>
-		<map_location_type hint="ugrum_plaer_mapspot">blue_location</map_location_type>
+		<map_location_type hint="ugrum_plaer_2">blue_location</map_location_type>
 		<object_story_id>mil_Svoboda_zoneguard</object_story_id>
 		<infoportion_complete>chaes_perexod_done</infoportion_complete> 
 	</objective>
@@ -358,7 +358,7 @@
 		</objective>
 	<objective>
 		<text>atp_mozg_2</text>
-		<map_location_type hint="mil_Svoboda_leader_name">blue_location</map_location_type>
+		<map_location_type hint="atp_mozg_2">blue_location</map_location_type>
 		<object_story_id>Mil_Lukash</object_story_id>
 		<infoportion_complete>svoboda_lukash_done</infoportion_complete> 
 	</objective>
@@ -380,7 +380,7 @@
 	</objective>
 	<objective>
 		<text>adrenalin_disk_2</text>
-		<map_location_type hint="agro_adrenalin">blue_location</map_location_type>
+		<map_location_type hint="adrenalin_disk_2">blue_location</map_location_type>
 		<object_story_id>agro_adrenalin</object_story_id>
 		<infoportion_complete>arh_disk_done</infoportion_complete> 
 	</objective>
@@ -402,7 +402,7 @@
 	</objective>
 	<objective>
 		<text>sahar_sumka_2</text>
-		<map_location_type hint="yan_saharov_name">blue_location</map_location_type>
+		<map_location_type hint="sahar_sumka_2">blue_location</map_location_type>
 		<object_story_id>yan_general_ecolog</object_story_id>
 		<infoportion_complete>sahar_sumka_done</infoportion_complete> 
 	</objective>
@@ -424,7 +424,7 @@
 	</objective>
 	<objective>
 		<text>arhara_doctor_2</text>
-		<map_location_type hint="cit_doctor_name">blue_location</map_location_type>
+		<map_location_type hint="arhara_doctor_2">blue_location</map_location_type>
 		<object_story_id>Doktor</object_story_id>
 		<infoportion_complete>med_dok_done</infoportion_complete> 
 	</objective>
@@ -446,7 +446,7 @@
 	</objective>
 	<objective>
 	<text>vorona_povar_2</text>
-		<map_location_type hint="mil_Svoboda_cook_name">blue_location</map_location_type>
+		<map_location_type hint="vorona_povar_2">blue_location</map_location_type>
 		<object_story_id>Mil_Cook</object_story_id>
 		<infoportion_complete>arhara_omlet_done</infoportion_complete> 
 	</objective>
@@ -468,7 +468,7 @@
 	</objective>
 	<objective>
 		<text>lekarstvo_bandita_nayti_2</text>
-		<map_location_type hint="esc_akim">blue_location</map_location_type>
+		<map_location_type hint="lekarstvo_bandita_nayti_2">blue_location</map_location_type>
 		<object_story_id>esc_akim</object_story_id>
 		<infoportion_complete>arhara_omlet_akim_done</infoportion_complete> 
 	</objective>
@@ -490,7 +490,7 @@
 	</objective>
 	<objective>
 		<text>shaxter_fonar_2</text>
-		<map_location_type hint="peshera_shaxter">blue_location</map_location_type>
+		<map_location_type hint="shaxter_fonar_2">blue_location</map_location_type>
 		<object_story_id>peshera_shaxter</object_story_id>
 		<infoportion_complete>shaxter_fonar_dost_done</infoportion_complete> 
 	</objective>
@@ -512,7 +512,7 @@
 	</objective>
 	<objective>
 		<text>akim_kubik_rubik_2</text>
-		<map_location_type hint="esc_akim">blue_location</map_location_type>
+		<map_location_type hint="akim_kubik_rubik_2">blue_location</map_location_type>
 		<object_story_id>esc_akim</object_story_id>
 		<infoportion_complete>akim_kubik_nayti_done</infoportion_complete> 
 	</objective>
@@ -534,7 +534,7 @@
 	</objective>
 	<objective>
 		<text>shaxter_kniga_2</text>
-		<map_location_type hint="peshera_shaxter">blue_location</map_location_type>
+		<map_location_type hint="shaxter_kniga_2">blue_location</map_location_type>
 		<object_story_id>peshera_shaxter</object_story_id>
 		<infoportion_complete>shax_kniga_naity_done</infoportion_complete> 
 	</objective>
@@ -556,7 +556,7 @@
 	</objective>
 	<objective>
 		<text>lysyi_klad_2</text>
-		<map_location_type hint="bar_lisiy_name">blue_location</map_location_type>
+		<map_location_type hint="lysyi_klad_2">blue_location</map_location_type>
 		<object_story_id>bar_lisiy</object_story_id>
 		<infoportion_complete>lysyi_klad_nayti_done</infoportion_complete> 
 	</objective>
@@ -578,7 +578,7 @@
 	</objective>
 	<objective>
 		<text>pda_sh_strelok_2</text>
-		<map_location_type hint="peshera_shaxter">blue_location</map_location_type>
+		<map_location_type hint="pda_sh_strelok_2">blue_location</map_location_type>
 		<object_story_id>peshera_shaxter</object_story_id>
 		<infoportion_complete>pda_shaxt_strelok_naity_done</infoportion_complete> 
 	</objective>
@@ -600,7 +600,7 @@
 	</objective>
 	<objective>
 		<text>petrenko_flyga_2</text>
-		<map_location_type hint="bar_petrenko_name">blue_location</map_location_type>
+		<map_location_type hint="petrenko_flyga_2">blue_location</map_location_type>
 		<object_story_id>bar_dolg_polkovnik_petrenko</object_story_id>
 		<infoportion_complete>flyga_naity_done</infoportion_complete> 
 	</objective>
@@ -622,7 +622,7 @@
 	</objective>
 	<objective>
 		<text>dolgovyzui_2</text>
-		<map_location_type hint="dolgovazyi_name">blue_location</map_location_type>
+		<map_location_type hint="dolgovyzui_2">blue_location</map_location_type>
 		<object_story_id>dolgovazyi</object_story_id>
 		<infoportion_complete>dolgovyzui_lentyi_done</infoportion_complete> 
 	</objective>
@@ -644,7 +644,7 @@
 	</objective>
 	<objective>
 		<text>voronin_termos_2</text>
-		<map_location_type hint="bar_voronin_name">blue_location</map_location_type>
+		<map_location_type hint="voronin_termos_2">blue_location</map_location_type>
 		<object_story_id>bar_dolg_general_voronin</object_story_id>
 		<infoportion_complete>voronin_termos_naity_done</infoportion_complete> 
 	</objective>
@@ -666,7 +666,7 @@
 	</objective>
 	<objective>
 		<text>garik_vop_2</text>
-		<map_location_type hint="bar_bar_guard_name">blue_location</map_location_type>
+		<map_location_type hint="garik_vop_2">blue_location</map_location_type>
 		<object_story_id>bar_bar_guard</object_story_id>
 		<infoportion_complete>garik_vopros_done</infoportion_complete> 
 	</objective>
@@ -688,7 +688,7 @@
 	</objective>
 	<objective>
 		<text>petr_sidor_2</text>
-		<map_location_type hint="escape_trader_name">blue_location</map_location_type>
+		<map_location_type hint="petr_sidor_2">blue_location</map_location_type>
 		<object_story_id>Escape_Trader</object_story_id>
 		<infoportion_complete>petr_sidor_vzyt_done</infoportion_complete> 
 	</objective>
@@ -710,7 +710,7 @@
 	</objective>
 	<objective>
 		<text>voronin_stol_2</text>
-		<map_location_type hint="bar_voronin_name">blue_location</map_location_type>
+		<map_location_type hint="voronin_stol_2">blue_location</map_location_type>
 		<object_story_id>bar_dolg_general_voronin</object_story_id>
 		<infoportion_complete>voronin_stol_dostat_done</infoportion_complete> 
 	</objective>
@@ -732,7 +732,7 @@
 	</objective>
 	<objective>
 		<text>sahar_ekolog_2</text>
-		<map_location_type hint="yan_saharov_name">blue_location</map_location_type>
+		<map_location_type hint="sahar_ekolog_2">blue_location</map_location_type>
 		<object_story_id>yan_general_ecolog</object_story_id>
 		<infoportion_complete>sahar_info_done</infoportion_complete>
 	</objective>
@@ -754,7 +754,7 @@
 		</objective>
 	<objective>
 	<text>voronin_infa_2</text>
-		<map_location_type hint="bar_voronin_name">blue_location</map_location_type>
+		<map_location_type hint="voronin_infa_2">blue_location</map_location_type>
 		<object_story_id>bar_dolg_general_voronin</object_story_id>
 		<infoportion_complete>voronin_infa_gg_done</infoportion_complete> 
 	</objective>
@@ -776,7 +776,7 @@
 	</objective>
 	<objective>
 		<text>naemn_shturm_2</text>
-		<map_location_type hint="bar_voronin_name">blue_location</map_location_type>
+		<map_location_type hint="naemn_shturm_2">blue_location</map_location_type>
 		<object_story_id>bar_dolg_general_voronin</object_story_id>
 		<infoportion_complete>naemn_shturm_poluch_done</infoportion_complete> 
 	</objective>
@@ -798,7 +798,7 @@
 	</objective>
 	<objective>
 	<text>kalinin_atp_2</text>
-		<map_location_type hint="atp_kalinin_name">blue_location</map_location_type>
+		<map_location_type hint="kalinin_atp_2">blue_location</map_location_type>
 		<object_story_id>atp_kalinin</object_story_id>
 		<infoportion_complete>kalinin_zadan_done</infoportion_complete> 
 	</objective>
@@ -820,7 +820,7 @@
 	</objective>
 	<objective>
 		<text>gonets_atp_2</text>
-		<map_location_type hint="atp_kalinin_name">blue_location</map_location_type>
+		<map_location_type hint="gonets_atp_2">blue_location</map_location_type>
 		<object_story_id>atp_kalinin</object_story_id>
 		<infoportion_complete>gonets_spasti_done</infoportion_complete> 
 	</objective>
@@ -842,7 +842,7 @@
 	</objective>
 	<objective>
 		<text>kalinin_btr_2</text>
-		<map_location_type hint="atp_kalinin_name">blue_location</map_location_type>
+		<map_location_type hint="kalinin_btr_2">blue_location</map_location_type>
 		<object_story_id>atp_kalinin</object_story_id>
 		<infoportion_complete>kalinin_btr_vzyt_done</infoportion_complete> 
 	</objective>
@@ -864,7 +864,7 @@
 	</objective>
 	<objective>
 		<text>btr_ataka_02</text>
-		<map_location_type hint="atp_kalinin_name">blue_location</map_location_type>
+		<map_location_type hint="btr_ataka_02">blue_location</map_location_type>
 		<object_story_id>atp_kalinin</object_story_id>
 		<infoportion_complete>btr_ataka_done</infoportion_complete> 
 	</objective>
@@ -886,7 +886,7 @@
 	</objective>
 	<objective>
 		<text>shax_plennik_2</text>
-		<map_location_type hint="peshera_shaxter">blue_location</map_location_type>
+		<map_location_type hint="shax_plennik_2">blue_location</map_location_type>
 		<object_story_id>peshera_shaxter</object_story_id>
 		<infoportion_complete>shax_plennik_nayti_done</infoportion_complete> 
 	</objective>
@@ -908,7 +908,7 @@
 	</objective>
 	<objective>
 		<text>fima_mulo_2</text>
-		<map_location_type hint="peshera_plennyi_name">blue_location</map_location_type>
+		<map_location_type hint="fima_mulo_2">blue_location</map_location_type>
 		<object_story_id>peshera_plennyi</object_story_id>
 		<infoportion_complete>fima_mulo_nayti_done</infoportion_complete> 
 	</objective>
@@ -930,7 +930,7 @@
 	</objective>
 	<objective>
 		<text>adr_shkatulka_2</text>
-		<map_location_type hint="agro_adrenalin">blue_location</map_location_type>
+		<map_location_type hint="adr_shkatulka_2">blue_location</map_location_type>
 		<object_story_id>agro_adrenalin</object_story_id>
 		<infoportion_complete>adr_shkatulka_dost_done</infoportion_complete> 
 	</objective>
@@ -952,7 +952,7 @@
 	</objective>
 	<objective>
 		<text>tretiy_kod_2</text>
-		<map_location_type hint="peshera_shaxter">blue_location</map_location_type>
+		<map_location_type hint="tretiy_kod_2">blue_location</map_location_type>
 		<object_story_id>peshera_shaxter</object_story_id>
 		<infoportion_complete>tretiy_kod_dost_done</infoportion_complete> 
 	</objective>
@@ -974,7 +974,7 @@
 	</objective>
 	<objective>
 		<text>sidor_amulet_2</text>
-		<map_location_type hint="escape_trader_name">blue_location</map_location_type>
+		<map_location_type hint="sidor_amulet_2">blue_location</map_location_type>
 		<object_story_id>Escape_Trader</object_story_id>
 		<infoportion_complete>sidor_amulet_vzyt_done</infoportion_complete> 
 	</objective>
@@ -996,7 +996,7 @@
 	</objective>
 	<objective>
 		<text>otshelnik_yzik_2</text>
-		<map_location_type hint="otshelnik_name">blue_location</map_location_type>
+		<map_location_type hint="otshelnik_yzik_2">blue_location</map_location_type>
 		<object_story_id>otshelnik</object_story_id>
 		<infoportion_complete>otshelnik_yzik_nayti_done</infoportion_complete> 
 	</objective>
@@ -1021,7 +1021,7 @@
 	</objective>
 	<objective>
 		<text>ginekolog_lekarstvo_2</text>
-		<map_location_type hint="land_medik_name">blue_location</map_location_type>
+		<map_location_type hint="ginekolog_lekarstvo_2">blue_location</map_location_type>
 		<object_story_id>land_medik</object_story_id>
 		<infoportion_fail>medik_proval</infoportion_fail>
 		<infoportion_complete>ginekolog_lekarstvo_nayti_done</infoportion_complete>
@@ -1044,7 +1044,7 @@
 	</objective>
 	<objective>
 		<text>jora_accumul_seif_2</text>
-		<map_location_type hint="jora_anomaly_name">blue_location</map_location_type>
+		<map_location_type hint="jora_accumul_seif_2">blue_location</map_location_type>
 		<object_story_id>jora_anomaly</object_story_id>
 		<infoportion_complete>jora_accumul_done</infoportion_complete> 
 	</objective>
@@ -1066,7 +1066,7 @@
 	</objective>
 	<objective>
 		<text>starik_zadanie_2</text>
-		<map_location_type hint="lazaret_starik_name">blue_location</map_location_type>
+		<map_location_type hint="starik_zadanie_2">blue_location</map_location_type>
 		<object_story_id>land_lazaret_starik</object_story_id>
 		<infoportion_complete>starik_zadanie_vzyt_done</infoportion_complete> 
 	</objective>
@@ -1090,7 +1090,7 @@
 	</objective>
 	<objective>
 		<text>piligrim_britva_2</text>
-		<map_location_type hint="piligrim_name">blue_location</map_location_type>
+		<map_location_type hint="piligrim_britva_2">blue_location</map_location_type>
 		<object_story_id>piligrim</object_story_id>
 		<infoportion_fail>piligrim_proval</infoportion_fail>
 		<infoportion_complete>piligrim_britva_nayti_done</infoportion_complete> 
@@ -1113,7 +1113,7 @@
 	</objective>
 	<objective>
 		<text>otsh_pda_2</text>
-		<map_location_type hint="agro_adrenalin">blue_location</map_location_type>
+		<map_location_type hint="otsh_pda_2">blue_location</map_location_type>
 		<object_story_id>agro_adrenalin</object_story_id>
 		<infoportion_complete>otsh_pda_nayti_done</infoportion_complete> 
 	</objective>
@@ -1135,7 +1135,7 @@
 	</objective>
 	<objective>
 		<text>golo_detektor_2</text>
-		<map_location_type hint="tehnik_golograma_name">blue_location</map_location_type>
+		<map_location_type hint="golo_detektor_2">blue_location</map_location_type>
 		<object_story_id>lazaret_golograma</object_story_id>
 		<infoportion_complete>golo_detektor_nayti_done</infoportion_complete> 
 	</objective>
@@ -1157,7 +1157,7 @@
 	</objective>
 	<objective>
 		<text>medik_pribor_1_2</text>
-		<map_location_type hint="land_medik_name">blue_location</map_location_type>
+		<map_location_type hint="medik_pribor_1_2">blue_location</map_location_type>
 		<object_story_id>land_medik</object_story_id>
 		<infoportion_complete>medik_pribor_1_nayti_done</infoportion_complete> 
 	</objective>
@@ -1179,7 +1179,7 @@
 	</objective>
 	<objective>
 		<text>akkum_and_mikposx_2</text>
-		<map_location_type hint="land_medik_name">blue_location</map_location_type>
+		<map_location_type hint="akkum_and_mikposx_2">blue_location</map_location_type>
 		<object_story_id>land_medik</object_story_id>
 		<infoportion_complete>akkum_and_mikposx_nayti_done</infoportion_complete> 
 	</objective>
@@ -1201,7 +1201,7 @@
 	</objective>
 	<objective>
 		<text>chimaera_zadan_2</text>
-		<map_location_type hint="land_sniper_chimaera_name">blue_location</map_location_type>
+		<map_location_type hint="chimaera_zadan_2">blue_location</map_location_type>
 		<object_story_id>land_sniper_chimaera</object_story_id>
 		<infoportion_complete>chimaera_zadan_nayti_done</infoportion_complete> 
 	</objective>
@@ -1223,7 +1223,7 @@
 	</objective>
 	<objective>
 		<text>land_oxot_2</text>
-		<map_location_type hint="aver_filin_name">blue_location</map_location_type>
+		<map_location_type hint="land_oxot_2">blue_location</map_location_type>
 		<object_story_id>aver_filin</object_story_id>
 		<infoportion_complete>land_oxot_nayti_done</infoportion_complete> 
 	</objective>
@@ -1245,7 +1245,7 @@
 	</objective>
 	<objective>
 		<text>ginek_vlip_02</text>
-		<map_location_type hint="land_medik_name">blue_location</map_location_type>
+		<map_location_type hint="ginek_vlip_02">blue_location</map_location_type>
 		<object_story_id>land_medik</object_story_id>
 		<infoportion_complete>ginek_vlip_done</infoportion_complete> 
 	</objective>
@@ -1267,7 +1267,7 @@
 	</objective>
 	<objective>
 		<text>vuxod_atp_02</text>
-		<map_location_type hint="atp_kalinin_name">blue_location</map_location_type>
+		<map_location_type hint="vuxod_atp_02">blue_location</map_location_type>
 		<object_story_id>atp_kalinin</object_story_id>
 		<infoportion_complete>vuxod_atp_done</infoportion_complete>
 	</objective>
@@ -1289,7 +1289,7 @@
 	</objective>
 	<objective>
 		<text>kluk_vstrecha_02</text>
-		<map_location_type hint="klyk_name">blue_location</map_location_type>
+		<map_location_type hint="kluk_vstrecha_02">blue_location</map_location_type>
 		<object_story_id>new_kluk_nz</object_story_id>
 		<infoportion_complete>kluk_vstrecha_done</infoportion_complete> 
 	</objective>
@@ -1311,7 +1311,7 @@
 	</objective>
 	<objective>
 		<text>lukash_pechatka_2</text>
-		<map_location_type hint="mil_Svoboda_leader_name">blue_location</map_location_type>
+		<map_location_type hint="lukash_pechatka_2">blue_location</map_location_type>
 		<object_story_id>Mil_Lukash</object_story_id>
 		<infoportion_complete>lukash_pechatka_nayti_done</infoportion_complete> 
 	</objective>
@@ -1333,7 +1333,7 @@
 	</objective>
 	<objective>
 		<text>vitamin_reyd_2</text>
-		<map_location_type hint="vitamin_name">blue_location</map_location_type>
+		<map_location_type hint="vitamin_reyd_2">blue_location</map_location_type>
 		<object_story_id>warlab_vitamin</object_story_id>
 		<infoportion_complete>vitamin_reyd_zadan_done</infoportion_complete> 
 	</objective>
@@ -1357,7 +1357,7 @@
 	</objective>
 	<objective>
 		<text>pantera_fone_2</text>
-		<map_location_type hint="pantera_name">blue_location</map_location_type>
+		<map_location_type hint="pantera_fone_2">blue_location</map_location_type>
 		<object_story_id>pantera</object_story_id>
 		<infoportion_fail>pantera_fone_nayti_proval</infoportion_fail>
 		<infoportion_complete>pantera_fone_nayti_done</infoportion_complete> 
@@ -1382,7 +1382,7 @@
 	</objective>
 	<objective>
 		<text>pant_zadan_2</text>
-		<map_location_type hint="pantera_name">blue_location</map_location_type>
+		<map_location_type hint="pant_zadan_2">blue_location</map_location_type>
 		<object_story_id>pantera</object_story_id>
 		<infoportion_fail>zadanie2_proval</infoportion_fail>
 		<infoportion_complete>pantera_zadanie2_done</infoportion_complete> 
@@ -1405,7 +1405,7 @@
 	</objective>
 	<objective>
 		<text>body_pantera_2</text>
-		<map_location_type hint="bodi_pantera1_name">blue_location</map_location_type>
+		<map_location_type hint="body_pantera_2">blue_location</map_location_type>
 		<object_story_id>bodi_pantera1</object_story_id>
 		<infoportion_complete>body_pantera_talk_done</infoportion_complete> 
 	</objective>
@@ -1427,7 +1427,7 @@
 	</objective>
 	<objective>
 		<text>p_z_tri_2</text>
-		<map_location_type hint="pantera_name">blue_location</map_location_type>
+		<map_location_type hint="p_z_tri_2">blue_location</map_location_type>
 		<object_story_id>pantera</object_story_id>
 		<infoportion_complete>pantera_zadanie3_done</infoportion_complete> 
 	</objective>
@@ -1445,12 +1445,11 @@
 	</objective>
 	<objective>
 		<text>gologr_1</text>
-		<!--<function_complete>arhara_dialog.gologr_tehnik_have</function_complete>-->
 		<infoportion_set_complete>gologr_tehnik_have</infoportion_set_complete>
 	</objective>
 	<objective>
 		<text>gologr_2</text>
-		<map_location_type hint="tehnik_golograma_name">blue_location</map_location_type>
+		<map_location_type hint="gologr_2">blue_location</map_location_type>
 		<object_story_id>tehnik_golograma</object_story_id>
 		<infoportion_complete>gologr_tehnik_done</infoportion_complete> 
 	</objective>
@@ -1474,7 +1473,7 @@
 	</objective>
 	<objective>
 		<text>klenov_gol_2</text>
-		<map_location_type hint="klenov_name">blue_location</map_location_type>
+		<map_location_type hint="klenov_gol_2">blue_location</map_location_type>
 		<object_story_id>klenov</object_story_id>
 		<infoportion_fail>gologr_trup</infoportion_fail>
 		<infoportion_complete>klenov_gol_nayti_done</infoportion_complete> 
@@ -1497,7 +1496,7 @@
 	</objective>
 	<objective>
 		<text>klenov_vse_2</text>
-		<map_location_type hint="klenov_name">blue_location</map_location_type>
+		<map_location_type hint="klenov_vse_2">blue_location</map_location_type>
 		<object_story_id>klenov</object_story_id>
 		<infoportion_complete>klenov_vse_ok_done</infoportion_complete> 
 	</objective>
@@ -1533,7 +1532,7 @@
 	</objective>
 	<objective>
 		<text>za_bablom_1</text>
-		<map_location_type hint="escape_trader_name">blue_location</map_location_type>
+		<map_location_type hint="za_bablom_1">blue_location</map_location_type>
 		<object_story_id>Escape_Trader</object_story_id>
 		<infoportion_complete>za_bablom_ksidoru_done</infoportion_complete> 
 	</objective>
@@ -1550,7 +1549,7 @@
 	</objective>
 	<objective>
 		<text>kolmogor_say_01</text>
-		<map_location_type hint="kolmogor_name">blue_location</map_location_type>
+		<map_location_type hint="kolmogor_say_01">blue_location</map_location_type>
 		<object_story_id>kolmogor</object_story_id>
 		<infoportion_complete>kolmogor_say_done</infoportion_complete> 
 	</objective>
@@ -1567,7 +1566,7 @@
 	</objective>
 	<objective>
 		<text>sestra_start_1</text>
-		<map_location_type hint="kolmogor_name">blue_location</map_location_type>
+		<map_location_type hint="sestra_start_1">blue_location</map_location_type>
 		<object_story_id>kolmogor</object_story_id>
 		<infoportion_complete>kolmogor_sestra_done</infoportion_complete> 
 	</objective>
@@ -1584,7 +1583,7 @@
 	</objective>
 	<objective>
 		<text>village_shtab_1</text>
-		<map_location_type hint="kolmogor_name">blue_location</map_location_type>
+		<map_location_type hint="village_shtab_1">blue_location</map_location_type>
 		<object_story_id>kolmogor</object_story_id>
 		<infoportion_complete>village_shtab_done</infoportion_complete> 
 	</objective>
@@ -1601,12 +1600,11 @@
 	</objective>
 	<objective>
 		<text>kolm_obsledov_1</text>
-		<!--<function_complete>arhara_dialog.klenov_vse_ok_have</function_complete>-->
 		<infoportion_set_complete>kolmogor_obsledovanie_have</infoportion_set_complete>
 	</objective>
 	<objective>
 		<text>kolm_obsledov_2</text>
-		<map_location_type hint="kolmogor_name">blue_location</map_location_type>
+		<map_location_type hint="kolm_obsledov_2">blue_location</map_location_type>
 		<object_story_id>kolmogor</object_story_id>
 		<infoportion_complete>kolmogor_obsledovanie_done</infoportion_complete> 
 	</objective>
@@ -1628,7 +1626,7 @@
 	</objective>
 	<objective>
 		<text>derevny_zashita_2</text>
-		<map_location_type hint="kolmogor_name">blue_location</map_location_type>
+		<map_location_type hint="derevny_zashita_2">blue_location</map_location_type>
 		<object_story_id>kolmogor</object_story_id>
 		<infoportion_complete>derevny_zashita_done</infoportion_complete> 
 	</objective>
@@ -1650,7 +1648,7 @@
 	</objective>
 	<objective>
 		<text>klenov_antena_02</text>
-		<map_location_type hint="klenov_name">blue_location</map_location_type>
+		<map_location_type hint="klenov_antena_02">blue_location</map_location_type>
 		<object_story_id>klenov</object_story_id>
 		<infoportion_complete>klenov_antena_done</infoportion_complete> 
 	</objective>
@@ -1673,7 +1671,7 @@
 	</objective>
 	<objective>
 		<text>boloto_provod_2</text>
-		<map_location_type hint="boloto_provodnik_name">blue_location</map_location_type>
+		<map_location_type hint="boloto_provod_2">blue_location</map_location_type>
 		<object_story_id>boloto_provodnik</object_story_id>
 		<infoportion_complete>boloto_provod_vstrecha_done</infoportion_complete> 
 	</objective>
@@ -1695,7 +1693,7 @@
 	</objective>
 	<objective>
 		<text>zemlyk_zadanie1_02</text>
-		<map_location_type hint="zemlyk_name">blue_location</map_location_type>
+		<map_location_type hint="zemlyk_zadanie1_02">blue_location</map_location_type>
 		<object_story_id>zemlyk</object_story_id>
 		<infoportion_complete>zemlyk_zadanie1_done</infoportion_complete> 
 	</objective>
@@ -1712,7 +1710,7 @@
 	</objective>
 	<objective>
 		<text>black_dok_gener_1</text>
-		<map_location_type hint="prizrak_name">blue_location</map_location_type>
+		<map_location_type hint="black_dok_gener_1">blue_location</map_location_type>
 		<object_story_id>generators_prizrak</object_story_id>
 		<infoportion_complete>gener_prizr_udav_start</infoportion_complete> 
 	</objective>
@@ -1734,7 +1732,7 @@
 	</objective>
 	<objective>
 		<text>udav_poshli_1</text>
-		<map_location_type hint="marsh_udav_name">blue_location</map_location_type>
+		<map_location_type hint="udav_poshli_1">blue_location</map_location_type>
 		<object_story_id>marsh_udav</object_story_id>
 		<infoportion_complete>udav_vstrecha_poshli_done</infoportion_complete> 
 	</objective>
@@ -1756,7 +1754,7 @@
 	</objective>
 	<objective>
 		<text>ander_joystik_2</text>
-		<map_location_type hint="andersen_name">blue_location</map_location_type>
+		<map_location_type hint="ander_joystik_2">blue_location</map_location_type>
 		<object_story_id>andersen</object_story_id>
 		<infoportion_complete>ander_joystik_say_done</infoportion_complete> 
 	</objective>
@@ -1773,7 +1771,7 @@
 	</objective>
 	<objective>
 		<text>udav_pabota_01</text>
-		<map_location_type hint="marsh_udav_name">blue_location</map_location_type>
+		<map_location_type hint="udav_pabota_01">blue_location</map_location_type>
 		<object_story_id>generators_udav</object_story_id>
 		<infoportion_complete>udav_pabota_done</infoportion_complete> 
 	</objective>
@@ -1834,7 +1832,7 @@
 		<article>tex_kl_na_walk</article>
 	</objective>
 	<objective>
-		<map_location_type hint="klenov_name">blue_location</map_location_type>
+		<map_location_type hint="kl_na_walk_1">blue_location</map_location_type>
 		<object_story_id>klenov</object_story_id>
 		<text>kl_na_walk_1</text>
 		<infoportion_complete>polt_art_done</infoportion_complete> 
@@ -1857,7 +1855,7 @@
 	</objective>
 	<objective>
 		<text>muha_kukl_2</text>
-		<map_location_type hint="devchonka_name">blue_location</map_location_type>
+		<map_location_type hint="muha_kukl_2">blue_location</map_location_type>
 		<object_story_id>devchonka</object_story_id>
 		<infoportion_complete>muha_kukla_done</infoportion_complete> 
 	</objective>
@@ -1879,7 +1877,7 @@
 	</objective>
 	<objective>
 		<text>voronin_samopisez_02</text>
-		<map_location_type hint="bar_voronin_name">blue_location</map_location_type>
+		<map_location_type hint="voronin_samopisez_02">blue_location</map_location_type>
 		<object_story_id>bar_dolg_general_voronin</object_story_id>
 		<infoportion_complete>voronin_samopisez_done</infoportion_complete> 
 	</objective>
@@ -1916,7 +1914,7 @@
 	</objective>
 	<objective>
 		<text>solv_say_2</text>
-		<map_location_type hint="andersen_name">blue_location</map_location_type>
+		<map_location_type hint="solv_say_2">blue_location</map_location_type>
 		<object_story_id>gen_andersen1</object_story_id>
 		<infoportion_complete>solvador_say_done</infoportion_complete> 
 	</objective>
@@ -2014,7 +2012,7 @@
 	</objective>
 	<objective>
 		<text>odnonog_foto_2</text>
-		<map_location_type hint="odnonogiy_name">blue_location</map_location_type>
+		<map_location_type hint="odnonog_foto_2">blue_location</map_location_type>
 		<object_story_id>odnonogiy_stalk</object_story_id>
 		<infoportion_complete>odnonogiy_foto_done</infoportion_complete> 
 	</objective>
@@ -2116,7 +2114,7 @@
 	</objective>
 	<objective>
 		<text>izomorf_dial_2</text>
-		<map_location_type hint="klenov_name">blue_location</map_location_type>
+		<map_location_type hint="izomorf_dial_2">blue_location</map_location_type>
 		<object_story_id>klenov</object_story_id>
 		<infoportion_complete>izomorf_dialog_done</infoportion_complete> 
 	</objective>
@@ -2139,7 +2137,7 @@
 		</objective>
 	<objective>
 		<text>kuzy_artmodifik_2</text>
-		<map_location_type hint="esc_soldier_commander_name">blue_location</map_location_type>
+		<map_location_type hint="kuzy_artmodifik_2">blue_location</map_location_type>
 		<object_story_id>esc_kuznetsov</object_story_id>
 		<infoportion_complete>kuzy_artmodifikator_done</infoportion_complete> 
 	</objective>
@@ -2177,7 +2175,7 @@
 	</objective>
 	<objective>
 		<text>plot_dialog_2</text>
-		<map_location_type hint="svalka_plot_stalk_name">blue_location</map_location_type>
+		<map_location_type hint="plot_dialog_2">blue_location</map_location_type>
 		<object_story_id>svalka_plot_stalk</object_story_id>
 		<infoportion_complete>plot_dialog_say_done</infoportion_complete> 
 	</objective>
@@ -2275,7 +2273,7 @@
 	</objective>
 	<objective>
 		<text>starsh_say_2</text>
-		<map_location_type hint="city_starshoy_name">blue_location</map_location_type>
+		<map_location_type hint="starsh_say_2">blue_location</map_location_type>
 		<object_story_id>city_starshoy</object_story_id>
 		<infoportion_complete>starshoy_say_one_done</infoportion_complete> 
 	</objective>
