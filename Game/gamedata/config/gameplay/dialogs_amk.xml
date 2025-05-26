@@ -13486,6 +13486,8 @@
 			<precondition>mil_tasks.crazy_flash_task_active</precondition>
 			<has_info>psih_is_alive</has_info>
 			<dont_has_info>psih_flash_dal_1</dont_has_info>
+			<dont_has_info>psih_flash_dal_2</dont_has_info>
+			<dont_has_info>psih_flash_enemy</dont_has_info>
 			<text/>
 			<next>30</next>
 		</phrase>
@@ -13531,6 +13533,7 @@
 			<has_info>psih_is_alive</has_info>
 			<has_info>psih_flash_dal_1</has_info>
 			<dont_has_info>psih_flash_dal_2</dont_has_info>
+			<dont_has_info>psih_flash_enemy</dont_has_info>
 			<text/>
 			<next>40</next>
 		</phrase>
@@ -13560,6 +13563,7 @@
 			<text>psih_is_alive_45</text>
 		</phrase>
 		<phrase id="5">
+			<precondition>mil_tasks.crazy_flash_task_active</precondition>
 			<has_info>psih_is_alive</has_info>
 			<has_info>psih_flash_dal_1</has_info>
 			<has_info>psih_flash_dal_2</has_info>
@@ -13593,7 +13597,6 @@
 		
 		<phrase id="7">
 			<precondition>mil_tasks.crazy_flash_task_no_active</precondition>
-			<dont_has_info>psih_flash_dal_2</dont_has_info>
 			<dont_has_info>psih_flash_enemy</dont_has_info>
 			<has_info>psih_is_alive</has_info>
 			<text/>
