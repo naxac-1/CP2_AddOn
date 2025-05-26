@@ -164,6 +164,9 @@ function codelock:__init( box, mode )
 		local cd = netpk:parse_custom_data( data.custom_data )
 		if cd.password and cd.password.code then
 			self.code = cd.password.code
+			if not cd.zamok then
+				self.zamok_fix = true
+			end
 		end
 
 		self.is_fake_box = ( cd.storage ~= nil )
@@ -173,15 +176,23 @@ function codelock:__init( box, mode )
 end
 
 function codelock:Quit()
-	if self.install == false then 
-		self.object:set_nonscript_usable( true )
-	end
 	self.cls = nil
 	BlockUIDescr(false)
 end
 
 function codelock:OnNumberReceive( text, mode )
 --	log( "codelock: code = %s", text )
+	if self.zamok_fix then
+		if mode then
+			start_small_timer( 300, this.actor_open_box, self.object, self.is_fake_box )
+		else
+			self.object:set_nonscript_usable( true )
+		end
+		zamok.change_box_data(self.object:id(), true)
+		self:Quit()
+		return
+	end
+
 	if #text == 0 or mode == false then
 		self:Quit()
 		return
@@ -210,8 +221,9 @@ function codelock:OnNumberReceive( text, mode )
 		xr_logic.initialize_obj( self.object, st, false, Actor, modules.stype_item, "scripts\\code_inventory_box.ltx" )
 	else
 		if self.code == text then
-			self.object:set_nonscript_usable( true )
 			start_small_timer( 300, this.actor_open_box, self.object, self.is_fake_box )
+		else
+			self.object:set_nonscript_usable( true )
 		end
 	end
 
@@ -219,6 +231,7 @@ function codelock:OnNumberReceive( text, mode )
 end
 
 function actor_open_box( box, is_fake )
+	box:set_nonscript_usable( true )
 	if is_fake then
 		level.start_stop_menu( ui_invbox_new.UICarBodyNew( box ), true )
 	else
@@ -261,7 +274,7 @@ function transfer_all(actor, box)
 end
 
 -- Перезагрузка логики ящика без перевода в оффлайн
-function change_box_data(box_id)
+function change_box_data(box_id, is_fake)
 	local se_box = AI:object(box_id)
 	if se_box then
 	--	log1("box found: "..se_box:name())
@@ -270,7 +283,7 @@ function change_box_data(box_id)
 		local cd = netpk:parse_custom_data(data.custom_data)
 		if se_box:section_name() == "m_inventory_box" then	-- самопальный тайник
 			local path = ""
-			if ui_invbox_new.get_active_box() == box_id then
+			if is_fake or ui_invbox_new.get_active_box() == box_id then
 				path = "scripts\\new_inventory_box_1.ltx"
 			else 
 				path = "scripts\\new_inventory_box.ltx"

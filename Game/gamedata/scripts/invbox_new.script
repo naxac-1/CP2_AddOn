@@ -15,9 +15,9 @@ end
 
 function save_box_items(box, items)
 	log("~ save_box_items: %s", table.size(items))
-	if #items == 0 then
-		return
-	end
+--	if #items == 0 then
+--		return
+--	end
 
 	local items_to_save = {}
 	local repack_ammo = {}
@@ -61,6 +61,10 @@ function save_box_items(box, items)
 	local zc = 0
 	cd.storage = {}
 	while true do
+		if #items_to_save == 0 then
+			break
+		end
+
 		local size = 110	-- start packet size
 		local obj = AI:create("script_storage", vector(), 0, 0)
 		local stor = se_storage.get_storage(obj.id)
@@ -81,15 +85,13 @@ function save_box_items(box, items)
 		table.insert(fake_boxes[boxId], obj.id)
 		log("[%s]: packet size = %s", obj:name(), size + 1)
 	--	table.print(stor)
-		if #items_to_save == 0 then
-			break
-		end
 	end
 
 	if zc > 0 then
 		cd.zamok = { count = zc }
 	else
 		cd.zamok = nil
+		cd.password = nil
 	end
 
 	data.custom_data = netpk:gen_custom_data(cd)
