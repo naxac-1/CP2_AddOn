@@ -464,6 +464,9 @@
 		<text>Да-а? Ну, это... б-болваны...</text>
 	</string>
 <!-- AKILL begin-->
+	<string id="mil_cook_drunk_question_about_rg6_3_31">
+		<text>Угу...</text>
+	</string>
 	<string id="mil_cook_drunk_question_about_rg6_3_3">
 		<text>Н-не то с-слово...</text>
 	</string>
@@ -472,6 +475,18 @@
 	</string>
 	<string id="mil_cook_drunk_question_about_rg6_3_5">
 		<text>Э-э... Ну, так это... недалеко... тут... в лесу... рядом с этим... Там ещё... этот лежит... как его... ветро... ик... лёт!</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_3_6">
+		<text>В лесу?.. Эээ... В как...ком лесу?</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_3_7">
+		<text>На Радар-ре, в лесу. Там ле-ежит разбившившивс... разбишвишвы... тьфу, бл... упавший недавно ветрортолёт, котор-рый воякам постоянно харчи воз-зил. Там всё-ё есть.</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_3_8">
+		<text>О как... Так там, наверное, все продукты сгорели или рассыпались. Или монстры их сожрали, закусив вояками...</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_3_9">
+		<text>Ы-ы не... н-не надо б-беспокоится... Все п-прод-дукты в к-кейсах были... ик-к... их д-даже р-ра-ди-а-ци-я не б-берёт!</text>
 	</string>
 <!-- AKILL end -->
 	<string id="mil_dolg_skull_dialog_100">

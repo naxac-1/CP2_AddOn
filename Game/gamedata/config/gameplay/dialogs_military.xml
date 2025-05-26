@@ -890,12 +890,25 @@
 			<phrase id="2">
 				<text>mil_cook_drunk_question_about_rg6_3_2</text>
 				<next>3</next>
+				<next>31</next>
+				<next>32</next>
 				<give_info>mil_freedom_cook_rg6_1</give_info>
 				<give_info>mil_freedom_cook_rg6_4</give_info>
 				<give_info>mil_freedom_cook_rg6_ask</give_info>
                    <action>arhara_dialog.wpnrg_spawn</action>
 			</phrase>
+			<phrase id="31">
+				<dont_has_info>plov_kulinar_start</dont_has_info>
+				<text>mil_cook_drunk_question_about_rg6_3_31</text>
+			</phrase>
+			<phrase id="32">
+				<has_info>plov_kulinar_start</has_info>
+				<has_info>plov_povar</has_info>
+				<text>mil_cook_drunk_question_about_rg6_3_31</text>
+			</phrase>
 			<phrase id="3">
+				<has_info>plov_kulinar_start</has_info>
+				<dont_has_info>plov_povar</dont_has_info>
 				<text>mil_cook_drunk_question_about_rg6_3_3</text>
 				<next>4</next>
 			</phrase>
@@ -905,8 +918,25 @@
 			</phrase>
 			<phrase id="5">
 				<text>mil_cook_drunk_question_about_rg6_3_5</text>
+				<next>6</next>
 			</phrase>
-			<!-- AKILL end -->
+			<phrase id="6">
+				<text>mil_cook_drunk_question_about_rg6_3_6</text>
+				<next>7</next>
+			</phrase>
+			<phrase id="7">
+				<text>mil_cook_drunk_question_about_rg6_3_7</text>
+				<next>8</next>
+			</phrase>
+			<phrase id="8">
+				<text>mil_cook_drunk_question_about_rg6_3_8</text>
+				<next>9</next>
+			</phrase>
+			<phrase id="9">
+				<text>mil_cook_drunk_question_about_rg6_3_9</text>
+				<action>akill.plov_spawn_container1</action>
+				<give_info>plov_povar</give_info>
+			</phrase>
 			<phrase id="0">
 				<text>mil_cook_drunk_question_about_rg6_3_0</text>
 				<next>1</next>

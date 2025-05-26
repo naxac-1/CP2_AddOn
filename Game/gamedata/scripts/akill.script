@@ -939,13 +939,16 @@ end
 function plov_net_vodka()
 	return not inventory.search("vodka",5)
 end
-function plov_spawn_container()
-	inventory.out_items("vodka",5)
+function plov_spawn_container1()
 	AI:create_free("container_morkov",vector():set(324.44668579102,-47.485206604004,-184.05989074707),78774,2087)
 	AI:create_free("container_ris",vector():set(327.84130859375,-47.524192810059,-206.96257019043),81138,2081)
 	AI:create_free("voen_zombied1",vector():set(325.44668579102,-47.485206604004,-184.05989074707),78774,2087)
 	AI:create_free("voen_zombied2",vector():set(328.84130859375,-47.524192810059,-206.96257019043),81138,2081)
 	AI:create_free("bear",vector():set(393.75439453125,-47.450958251953,-217.5832824707),120890,2102)
+end
+function plov_spawn_container()
+	inventory.out_items("vodka",5)
+	plov_spawn_container1()
 end
 
 function checking_taken_item69(obj)
