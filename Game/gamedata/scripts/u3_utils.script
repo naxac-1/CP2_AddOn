@@ -54,6 +54,7 @@ end
 
 function can_save() -- не сохраняем во время открытых окон, когда нельзя сделать квиксейв
 	return level.main_input_receiver()==nil
+		and (game_options.LoadPause and _G.press_any_key_on_start ~= true)
 		and not has_alife_info("paused_on_load")
 end
 
