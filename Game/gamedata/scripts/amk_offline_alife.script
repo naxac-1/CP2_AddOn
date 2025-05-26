@@ -1985,7 +1985,7 @@ function is_valuable(item, section)
 
 		local cost = sys_ini:r_float_ex(sect, "cost")
 		if (IAmAWeapon[cls] and cost >= 1000) or (cost >= 800) then
-			return true
+			return sect~="zamok"
 		end
 	end
 	return false
