@@ -171,6 +171,79 @@
 		<text>Нет, не пойдёт. Работа есть работа, ничего личного.</text>
 	</string>
 
+	<string id="amk_recipt_stone_dikoobraz_1_name">
+		<text>Записи на флешке Психа (1)</text>
+	</string>
+	<string id="amk_recipt_stone_dikoobraz_2_name">
+		<text>Записи на флешке Психа (2)</text>
+	</string>
+	<string id="amk_recipt_steel_kolobok_name">
+		<text>Награда за ружьё</text>
+	</string>
+	<string id="amk_recipt_titan_kolobok_name">
+		<text>Запись в ПДА наёмника</text>
+	</string>
+	<string id="amk_recipt_almaz_kolobok_name">
+		<text>Данные от Круглова</text>
+	</string>
+	<string id="amk_recipt_controller_skalp_name">
+		<text>Запись в ПДА монолитовца</text>
+	</string>
+	<string id="amk_recipt_souls_name">
+		<text>Сообщение от Повара</text>
+	</string>
+	<string id="amk_recipt_tears_electra_name">
+		<text>Данные от Сахарова (1)</text>
+	</string>
+	<string id="amk_recipt_tears_fire_name">
+		<text>Данные от Сахарова (2)</text>
+	</string>
+	<string id="amk_recipt_tears_chimaera_name">
+		<text>Данные от Сахарова (3)</text>
+	</string>
+	<string id="amk_recipt_tears_kontroller_name">
+		<text>Записка из X-18</text>
+	</string>
+	<string id="amk_recipt_grandmother_glassbeards_name">
+		<text>Данные от Долга</text>
+	</string>
+	<string id="amk_recipt_pra_grandmother_glassbeards_name">
+		<text>Данные от Сидоровича</text>
+	</string>
+	<string id="amk_recipt_burer_grandmother_glassbeards_name">
+		<text>Разговор с дезертиром</text>
+	</string>
+	<string id="amk_recipt_dikoobraz_name">
+		<text>Данные от Информатора (1)</text>
+	</string>
+	<string id="amk_recipt_electra_dikoobraz_name">
+		<text>Украденные данные Скряги</text>
+	</string>
+	<string id="amk_recipt_sopl_dikoobraz_name">
+		<text>Данные от раненого</text>
+	</string>
+	<string id="amk_recipt_giant_small_brother_name">
+		<text>Украденные данные командира Заслона</text>
+	</string>
+	<string id="amk_recipt_shkura_name">
+		<text>Бумаги с блокпоста</text>
+	</string>
+	<string id="amk_recipt_cheshya_name">
+		<text>Данные от Воронина</text>
+	</string>
+	<string id="amk_recipt_pancir_name">
+		<text>Данные с Янтаря</text>
+	</string>
+	<string id="amk_recipt_simbion_name">
+		<text>Запись из Х-18</text>
+	</string>
+	<string id="amk_recipt_dummy_name">
+		<text>Запись из Х-16</text>
+	</string>
+	<string id="amk_recipt_fake_name">
+		<text>Данные от Информатора (2)</text>
+	</string>
+
 <string id="amk_recipt_stone_dikoobraz_1_text" >
     <text>Запись 1: "... при этом мы видели весь процесс от начала и до конца, несмотря на то, что монолитовцы окружили "Трамплин" плотным кольцом, пытаясь закрыть от возможного наблюдения процесс трансмутации и сам артефакт. Но Артём был на довольно выгодной позиции и ему удалось в бинокль рассмотреть брошенный в аномалию артефакт. Им оказался "Сопливый дикобраз" (название странное, но оно оригинальное, данное сталкером-создателем, мы эти данные проверили). Через девять часов, уже ночью артефакт выбросило аномалией обратно. Теперь нам предстоит забрать его у монолитовцев. Артём предложил сделать это во время их очередной молитвы "Монолиту". Она начнётся через 40 минут. После возвращения хочу похлопотать об этом толковом парне. Владислав Леонидович, думаю, Вы поддержите..." \n \nЗапись 2: "... данные фрагментарно скину на флешку, продублирую. С монолитовцами разобрались довольно быстро - пока они совершали какой-то странный обряд вокруг принесённого одним из них вместо рюкзака чёрного прямоугольника (я сначала думал, что это ранец, а оказалось, что это переносной алтарь (!); Владислав Леонидович, я думаю, этот факт будет интересен и российским, и иностранным коллегам). Артём открыл огонь из «Винтореза», а я добавил пару гранат из подствольника. Главные опасения к нашей радости не оправдались - изменённый артефакт остался невредим. После двух суток нашего похода я отметил следующие качества "Каменного дикобраза" (название дали, учитывая его свойства и происхождение от "Сопливого дикобраза"): данный артефакт, который я отнёс бы к классу абсолют, снижает дозу радиации, полученную человеком, на 60 мЗв/час! Помимо этого редчайшего качества, "Каменный дикобраз" снижает чувствительность человека к электрошоку и добавляет выносливости..." \n \nЗапись 3: "... за нами погоня. Монолитовцы, человек пятнадцать. Мы пробовали оторваться - не получилось. Зажимают постепенно в кольцо. Флешку с дублем информации оставлю Артёму Инкину, а сам попытаюсь задержать преследователей..." \n \n \n \n \n</text>
 </string>
