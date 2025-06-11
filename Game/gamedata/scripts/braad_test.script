@@ -1094,112 +1094,112 @@ function shadowman_red_spn3()
 end
 
 --------------------------------------------------------ГРИБЫ---------------------------------------------------------------
-local points={
-{position={x=-284.4497,y=-18.2044,z=193.8524},gv=1789,lv=56319}, ---склады
-{position={x=-355.6864,y=-3.100588,z=151.18237},gv=1793,lv=4240},  ---склады
-{position={x=-269.84619,y=-11.2427,z=-71.7646},gv=10,lv=3200},  -- кордон
-{position={x=-201.4213,y=-7.3733,z=-45.88},gv=68,lv=51172},  -- кордон
-{position={x=-174.16,y=-3.36,z=-13.652},gv=69,lv=76187},  -- кордон
-{position={x=-100.404,y=3.5878,z=77.947},gv=81,lv=160506},  -- кордон
-{position={x=-52.189,y=4.272,z=250.807},gv=173,lv=227393},  -- кордон
-{position={x=32.6452,y=1.899,z=383.063},gv=173,lv=227393},  -- кордон
-{position={x=465.1087,y=1.222,z=-178.309},gv=3554,lv=451363},  -- marsh
-{position={x=399.41339,y=0.3934,z=-169.761},gv=3547,lv=402755},  -- marsh
-{position={x=342.558,y=8.3023,z=-108.475},gv=3533,lv=357939},  -- marsh
-{position={x=272.111,y=0.548,z=-43.373},gv=3526,lv=310746},  -- marsh
-{position={x=291.1808,y=0.548,z=36.855},gv=3527,lv=325573},  -- marsh
-{position={x=367.14099,y=1.8678,z=161.486},gv=3539,lv=376678},  -- marsh
-{position={x=387.748,y=3.5888,z=287.368},gv=3540,lv=393779},  -- marsh
-{position={x=297.117,y=1.696,z=288.828},gv=3529,lv=329916},  -- marsh
-{position={x=205.688,y=0.727,z=285.857},gv=3499,lv=262506},  -- marsh
-{position={x=173.0422,y=1.435,z=355.277},gv=3491,lv=238394},  -- marsh
-{position={x=214.362,y=0.6504,z=412.3115},gv=3488,lv=268283},  -- marsh
-{position={x=217.9902,y=7.394,z=516.679},gv=3485,lv=270887},  -- marsh
-{position={x=142.997,y=0.535,z=-248.0656},gv=684,lv=374191},  -- agroprom
-{position={x=70.2182,y=-0.972,z=-234.066},gv=433,lv=305517},  -- agroprom
-{position={x=63.0578,y=-1.14418,z=-149.503},gv=641,lv=299132},  -- agroprom
-{position={x=-74.09,y=0.466,z=58.15},gv=528,lv=166791},  -- agroprom
-{position={x=-29.9080,y=2.2372,z=103.523},gv=588,lv=210656},  -- agroprom
-{position={x=12.6909,y=2.3448,z=92.3616},gv=476,lv=252867},  -- agroprom
-{position={x=81.1135,y=16.0997,z=132.682},gv=508,lv=316629},  -- agroprom
-{position={x=106.297,y=13.690,z=125.696},gv=508,lv=340894},  -- agroprom
-{position={x=123.6996,y=10.369,z=165.9576},gv=504,lv=357641},  -- agroprom
-{position={x=85.8348,y=10.5479,z=188.9713},gv=686,lv=321367},  -- agroprom
-{position={x=319.6008,y=-47.9699,z=-195.063},gv=2082,lv=76027},  -- radar
-{position={x=316.0666,y=-48.0291,z=-133.312},gv=2092,lv=74170},  -- radar
-{position={x=307.758,y=-50.2595,z=-245.0376},gv=2078,lv=69567},  -- radar
-{position={x=308.800,y=-49.135,z=-315.755},gv=2073,lv=69851},  -- radar
-{position={x=372.8744,y=-51.6907,z=-344.82},gv=2068,lv=105583},  -- radar
-{position={x=419.1445,y=-49.5586,z=-310.8674},gv=2066,lv=133749},  -- radar
-{position={x=352.3292,y=-47.796,z=-115.3638},gv=2093,lv=94080},  -- radar
-{position={x=395.896,y=-52.4274,z=-92.122},gv=2036,lv=122268},  -- radar
-{position={x=440.01821,y=-49.07274,z=-55.515},gv=2038,lv=143343},  -- radar
-{position={x=380.7494,y=-48.7936,z=-231.103},gv=2102,lv=111292},  -- radar
-{position={x=422.2033,y=-55.075,z=-259.047},gv=2106,lv=135222},  -- radar
-{position={x=466.6009,y=-48.3848,z=-219.513},gv=2059,lv=153140},  -- radar
-{position={x=487.1975,y=-49.9339,z=-185.659},gv=2056,lv=160751},  -- radar
-{position={x=109.0610,y=-0.6083,z=23.1811},gv=909,lv=305618},  -- darkvalley
-{position={x=161.0832,y=6.02887,z=-9.5908},gv=916,lv=361563},  -- darkvalley
-{position={x=177.67697,y=0.0723,z=-80.587},gv=919,lv=378637},  -- darkvalley
-{position={x=140.8797,y=0.14625,z=-210.068},gv=927,lv=338700},  -- darkvalley
-{position={x=174.1159,y=8.4689,z=-420.6929},gv=941,lv=374683},  -- darkvalley
-{position={x=156.46878,y=4.2590,z=-467.606},gv=941,lv=356378},  -- darkvalley
-{position={x=93.6686,y=1.662,z=-469.5579},gv=949,lv=288081},  -- darkvalley
-{position={x=18.3328,y=1.2652,z=-453.902},gv=952,lv=195541},  -- darkvalley
-{position={x=-76.9337,y=-0.73359,z=-395.521},gv=839,lv=83950},  -- darkvalley
-{position={x=-129.5605,y=0.86102,z=-344.974},gv=845,lv=28054},  -- darkvalley
-{position={x=-131.9178,y=-0.8644,z=-276.884},gv=848,lv=26173},  -- darkvalley
-{position={x=203.9575,y=4.3727,z=203.835},gv=2885,lv=351940},  -- puzir
-{position={x=182.1907,y=14.3156,z=168.909},gv=2885,lv=335133},  -- puzir
-{position={x=106.863,y=4.8457,z=141.5648},gv=2885,lv=274853},  -- puzir
-{position={x=60.0144,y=-0.001477,z=108.286},gv=2885,lv=238003},  -- puzir
-{position={x=46.0673,y=-0.0032,z=57.7905},gv=2885,lv=226374},  -- puzir
-{position={x=-9.9488,y=11.51488,z=-12.7767},gv=2882,lv=180062},  -- puzir
-{position={x=54.212,y=8.6488,z=-83.8907},gv=2884,lv=232601},  -- puzir
-{position={x=99.8832,y=0.12282,z=-94.3717},gv=2884,lv=269168},  -- puzir
-{position={x=102.5485,y=-0.00115,z=-136.3648},gv=2884,lv=270778},  -- puzir
-{position={x=-310.1566,y=-8.9571,z=30.3318},gv=2889,lv=338006},  -- aver
-{position={x=-249.7383,y=-27.5183,z=127.1921},gv=2893,lv=441876},  -- aver
-{position={x=-254.2902,y=11.043003,z=-3.8713},gv=2893,lv=434616},  -- aver
-{position={x=-165.4225,y=26.00623,z=6.20755},gv=2894,lv=585369},  -- aver
-{position={x=-94.820632,y=17.82067,z=39.2792},gv=2894,lv=708197},  -- aver
-{position={x=4.8559,y=-45.3861,z=111.9942},gv=2895,lv=873123},  -- aver
-{position={x=43.3978,y=-39.5448,z=166.2731},gv=2895,lv=943483},  -- aver
-{position={x=109.7717,y=-40.9248,z=260.0759},gv=2899,lv=1062136},  -- aver
-{position={x=217.1144,y=1.8175,z=186.544},gv=2901,lv=1250174},  -- aver
-{position={x=-27.02234,y=-0.8796,z=-294.626},gv=3274,lv=44437},  -- red_forest
-{position={x=17.7548,y=1.2997,z=-98.825},gv=3288,lv=77292},  -- red_forest
-{position={x=-4.83979,y=0.2346,z=-155.3056},gv=3282,lv=64796},  -- red_forest
-{position={x=7.52476,y=-2.52619,z=-265.6032},gv=3291,lv=71635},  -- red_forest
-{position={x=100.37268,y=-1.5567,z=-290.506},gv=3300,lv=101983},  -- red_forest
-{position={x=177.61671,y=-1.304368,z=-290.01339},gv=3314,lv=118739},  -- red_forest
-{position={x=179.43177,y=-1.16113,z=-46.8759},gv=3317,lv=119698},  -- red_forest
-{position={x=193.84136,y=-4.73345,z=10.9854},gv=3317,lv=126615},  -- red_forest
-{position={x=215.8037,y=1.2874,z=102.9057},gv=3319,lv=137614},  -- red_forest
-{position={x=194.8108,y=-1.7354,z=62.4528},gv=3318,lv=127327}  -- red_forest
-}
-
 function grib_respawn()
-local timeh =level.get_time_hours()
-local times =level.get_time_minutes()
-    if (timeh == 22 and times == 1)  then
-        if Actor:dont_has_info("info_respawn_grib") then
-		   del_mushroom()
-           spawn_grib()
-		   Actor:give_info_portion("info_respawn_grib")
+	local timeh = level.get_time_hours()
+	local times = level.get_time_minutes()
+	if (timeh == 22 and times < 10)  then
+		if Actor:dont_has_info("info_respawn_grib") then
+			del_mushroom()
+			spawn_grib()
+			Actor:give_info_portion("info_respawn_grib")
 		end
-    end
-    if (timeh == 23 and times == 1) then
-        Actor:disable_info_portion("info_respawn_grib")
-    end
+	elseif (timeh == 23 and times < 10) then
+		if Actor:has_info("info_respawn_grib") then
+			Actor:disable_info_portion("info_respawn_grib")
+		end
+	end
 end	
 
 function spawn_grib()
-	local v = vector()
-	for i = 1,28,1 do
-	    local a = table.random(points)
-		AI:create_free("mushroom", v:set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
-	--	log("~ spawn_grib")
+	local grib_points={
+		{position={x=-284.4497,y=-18.2044,z=193.8524},gv=1789,lv=56319}, ---military
+		{position={x=-355.6864,y=-3.100588,z=151.18237},gv=1793,lv=4240},  ---military
+		{position={x=-269.84619,y=-11.2427,z=-71.7646},gv=10,lv=3200},  -- escape
+		{position={x=-201.4213,y=-7.3733,z=-45.88},gv=68,lv=51172},  -- escape
+		{position={x=-174.16,y=-3.36,z=-13.652},gv=69,lv=76187},  -- escape
+		{position={x=-100.404,y=3.5878,z=77.947},gv=81,lv=160506},  -- escape
+		{position={x=-52.189,y=4.272,z=250.807},gv=173,lv=227393},  -- escape
+		{position={x=32.6452,y=1.899,z=383.063},gv=173,lv=227393},  -- escape
+		{position={x=465.1087,y=1.222,z=-178.309},gv=3554,lv=451363},  -- marsh
+		{position={x=399.41339,y=0.3934,z=-169.761},gv=3547,lv=402755},  -- marsh
+		{position={x=342.558,y=8.3023,z=-108.475},gv=3533,lv=357939},  -- marsh
+		{position={x=272.111,y=0.548,z=-43.373},gv=3526,lv=310746},  -- marsh
+		{position={x=291.1808,y=0.548,z=36.855},gv=3527,lv=325573},  -- marsh
+		{position={x=367.14099,y=1.8678,z=161.486},gv=3539,lv=376678},  -- marsh
+		{position={x=387.748,y=3.5888,z=287.368},gv=3540,lv=393779},  -- marsh
+		{position={x=297.117,y=1.696,z=288.828},gv=3529,lv=329916},  -- marsh
+		{position={x=205.688,y=0.727,z=285.857},gv=3499,lv=262506},  -- marsh
+		{position={x=173.0422,y=1.435,z=355.277},gv=3491,lv=238394},  -- marsh
+		{position={x=214.362,y=0.6504,z=412.3115},gv=3488,lv=268283},  -- marsh
+		{position={x=217.9902,y=7.394,z=516.679},gv=3485,lv=270887},  -- marsh
+		{position={x=142.997,y=0.535,z=-248.0656},gv=684,lv=374191},  -- agroprom
+		{position={x=70.2182,y=-0.972,z=-234.066},gv=433,lv=305517},  -- agroprom
+		{position={x=63.0578,y=-1.14418,z=-149.503},gv=641,lv=299132},  -- agroprom
+		{position={x=-74.09,y=0.466,z=58.15},gv=528,lv=166791},  -- agroprom
+		{position={x=-29.9080,y=2.2372,z=103.523},gv=588,lv=210656},  -- agroprom
+		{position={x=12.6909,y=2.3448,z=92.3616},gv=476,lv=252867},  -- agroprom
+		{position={x=81.1135,y=16.0997,z=132.682},gv=508,lv=316629},  -- agroprom
+		{position={x=106.297,y=13.690,z=125.696},gv=508,lv=340894},  -- agroprom
+		{position={x=123.6996,y=10.369,z=165.9576},gv=504,lv=357641},  -- agroprom
+		{position={x=85.8348,y=10.5479,z=188.9713},gv=686,lv=321367},  -- agroprom
+		{position={x=319.6008,y=-47.9699,z=-195.063},gv=2082,lv=76027},  -- radar
+		{position={x=316.0666,y=-48.0291,z=-133.312},gv=2092,lv=74170},  -- radar
+		{position={x=307.758,y=-50.2595,z=-245.0376},gv=2078,lv=69567},  -- radar
+		{position={x=308.800,y=-49.135,z=-315.755},gv=2073,lv=69851},  -- radar
+		{position={x=372.8744,y=-51.6907,z=-344.82},gv=2068,lv=105583},  -- radar
+		{position={x=419.1445,y=-49.5586,z=-310.8674},gv=2066,lv=133749},  -- radar
+		{position={x=352.3292,y=-47.796,z=-115.3638},gv=2093,lv=94080},  -- radar
+		{position={x=395.896,y=-52.4274,z=-92.122},gv=2036,lv=122268},  -- radar
+		{position={x=440.01821,y=-49.07274,z=-55.515},gv=2038,lv=143343},  -- radar
+		{position={x=380.7494,y=-48.7936,z=-231.103},gv=2102,lv=111292},  -- radar
+		{position={x=422.2033,y=-55.075,z=-259.047},gv=2106,lv=135222},  -- radar
+		{position={x=466.6009,y=-48.3848,z=-219.513},gv=2059,lv=153140},  -- radar
+		{position={x=487.1975,y=-49.9339,z=-185.659},gv=2056,lv=160751},  -- radar
+		{position={x=109.0610,y=-0.6083,z=23.1811},gv=909,lv=305618},  -- darkvalley
+		{position={x=161.0832,y=6.02887,z=-9.5908},gv=916,lv=361563},  -- darkvalley
+		{position={x=177.67697,y=0.0723,z=-80.587},gv=919,lv=378637},  -- darkvalley
+		{position={x=140.8797,y=0.14625,z=-210.068},gv=927,lv=338700},  -- darkvalley
+		{position={x=174.1159,y=8.4689,z=-420.6929},gv=941,lv=374683},  -- darkvalley
+		{position={x=156.46878,y=4.2590,z=-467.606},gv=941,lv=356378},  -- darkvalley
+		{position={x=93.6686,y=1.662,z=-469.5579},gv=949,lv=288081},  -- darkvalley
+		{position={x=18.3328,y=1.2652,z=-453.902},gv=952,lv=195541},  -- darkvalley
+		{position={x=-76.9337,y=-0.73359,z=-395.521},gv=839,lv=83950},  -- darkvalley
+		{position={x=-129.5605,y=0.86102,z=-344.974},gv=845,lv=28054},  -- darkvalley
+		{position={x=-131.9178,y=-0.8644,z=-276.884},gv=848,lv=26173},  -- darkvalley
+		{position={x=203.9575,y=4.3727,z=203.835},gv=2885,lv=351940},  -- puzir
+		{position={x=182.1907,y=14.3156,z=168.909},gv=2885,lv=335133},  -- puzir
+		{position={x=106.863,y=4.8457,z=141.5648},gv=2885,lv=274853},  -- puzir
+		{position={x=60.0144,y=-0.001477,z=108.286},gv=2885,lv=238003},  -- puzir
+		{position={x=46.0673,y=-0.0032,z=57.7905},gv=2885,lv=226374},  -- puzir
+		{position={x=-9.9488,y=11.51488,z=-12.7767},gv=2882,lv=180062},  -- puzir
+		{position={x=54.212,y=8.6488,z=-83.8907},gv=2884,lv=232601},  -- puzir
+		{position={x=99.8832,y=0.12282,z=-94.3717},gv=2884,lv=269168},  -- puzir
+		{position={x=102.5485,y=-0.00115,z=-136.3648},gv=2884,lv=270778},  -- puzir
+		{position={x=-310.1566,y=-8.9571,z=30.3318},gv=2889,lv=338006},  -- aver
+		{position={x=-249.7383,y=-27.5183,z=127.1921},gv=2893,lv=441876},  -- aver
+		{position={x=-254.2902,y=11.043003,z=-3.8713},gv=2893,lv=434616},  -- aver
+		{position={x=-165.4225,y=26.00623,z=6.20755},gv=2894,lv=585369},  -- aver
+		{position={x=-94.820632,y=17.82067,z=39.2792},gv=2894,lv=708197},  -- aver
+		{position={x=4.8559,y=-45.3861,z=111.9942},gv=2895,lv=873123},  -- aver
+		{position={x=43.3978,y=-39.5448,z=166.2731},gv=2895,lv=943483},  -- aver
+		{position={x=109.7717,y=-40.9248,z=260.0759},gv=2899,lv=1062136},  -- aver
+		{position={x=217.1144,y=1.8175,z=186.544},gv=2901,lv=1250174},  -- aver
+		{position={x=-27.02234,y=-0.8796,z=-294.626},gv=3274,lv=44437},  -- red_forest
+		{position={x=17.7548,y=1.2997,z=-98.825},gv=3288,lv=77292},  -- red_forest
+		{position={x=-4.83979,y=0.2346,z=-155.3056},gv=3282,lv=64796},  -- red_forest
+		{position={x=7.52476,y=-2.52619,z=-265.6032},gv=3291,lv=71635},  -- red_forest
+		{position={x=100.37268,y=-1.5567,z=-290.506},gv=3300,lv=101983},  -- red_forest
+		{position={x=177.61671,y=-1.304368,z=-290.01339},gv=3314,lv=118739},  -- red_forest
+		{position={x=179.43177,y=-1.16113,z=-46.8759},gv=3317,lv=119698},  -- red_forest
+		{position={x=193.84136,y=-4.73345,z=10.9854},gv=3317,lv=126615},  -- red_forest
+		{position={x=215.8037,y=1.2874,z=102.9057},gv=3319,lv=137614},  -- red_forest
+		{position={x=194.8108,y=-1.7354,z=62.4528},gv=3318,lv=127327}  -- red_forest
+	}
+
+	local n = math.random(23,  33)
+	for i = 1,n do
+	    local a = table.remove( grib_points, math.random(#grib_points) )
+		AI:create_free("mushroom", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
 	end
 end
 
@@ -1207,13 +1207,12 @@ function del_mushroom()
 	local actorpos = Actor:position()
 	local actor_lvl = level.name()
 	local obj, lvl
-    for a=1,65534 do
+	for a=1,65534 do
 		obj=AI:object(a)
 	    if obj and obj:section_name() == "mushroom"
 			and obj.parent_id == 65535
 		then
-			lvl = GGraph:valid_vertex_id(obj.m_game_vertex_id)
-				and object_level_name(obj) or ""
+			lvl = object_level_name(obj)
 			if lvl ~= actor_lvl or obj.position:distance_to(actorpos) > 100 then
 				AI:release(obj,true)
 			end
