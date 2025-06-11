@@ -218,6 +218,13 @@ function comm2comm_relation(community_from, community_to)
 	ASSERT(relations, "")
 	return relations[index_for_community[community_to]]
 end
+
+function get_communities()
+	if index_for_community == nil then
+		load_communities_relations()
+	end
+	return index_for_community
+end
 -----------------------------------------------------------------------
 
 function frandom(min, max)

@@ -246,36 +246,41 @@ end
 -- у монстров нету метода profile_name()
 -- TODO передавать в предикаты не npc_info, а объект
 function se_smart_terrain:fill_npc_info( obj, npc_info )
-  if not npc_info then
-    npc_info = {}
-  end
+	if not npc_info then
+		npc_info = {}
+	end
 
-  npc_info.se_obj       = obj
+	npc_info.se_obj       = obj
 
-  npc_info.class_id     = obj:clsid()
-  npc_info.section_name = obj:section_name()
-  npc_info.name         = obj:name()
-  npc_info.story_id     = obj.m_story_id
-  npc_info.community    = (self:get_obj_community( obj ))
-  npc_info.profile_name = obj.profile_name and obj:profile_name()
-  npc_info.rank         = obj:rank()
+	npc_info.class_id     = obj:clsid()
+	npc_info.section_name = obj:section_name()
+	npc_info.name         = obj:name()
+	npc_info.story_id     = obj.m_story_id
+	npc_info.rank         = obj:rank()
+	
+	local comm, is_stalk = self:get_obj_community( obj )
+	npc_info.community    = comm
+	if is_stalk then
+		npc_info.profile_name = obj:profile_name()
+		npc_info.is_sniper = string.find( npc_info.profile_name, "sniper" ) ~= nil
+		npc_info.is_sniper_name = string.find( npc_info.name, "sniper" ) ~= nil
+		if self.for_stalkers == nil then
+			self.for_stalkers = is_stalk
+		end
+	end
 
-  npc_info.group        = obj:g_group()
-  npc_info.squad        = obj:g_squad()
-  npc_info.team         = obj:g_team()
 
-  if npc_info.profile_name then
-    npc_info.is_sniper = string.find( npc_info.profile_name, "sniper" ) ~= nil
-  end
-  npc_info.is_sniper_name = string.find( npc_info.name, "sniper" ) ~= nil
+	npc_info.group        = obj:g_group()
+	npc_info.squad        = obj:g_squad()
+	npc_info.team         = obj:g_team()
 
-  local t               = obj.smart_terrain_conditions
-  if t then
-    t = t[self:name()]
-  end
+	local t               = obj.smart_terrain_conditions
+	if t then
+		t = t[self:name()]
+	end
+	npc_info.cond         = t
 
-  npc_info.cond         = t
-  return npc_info
+	return npc_info
 end
 
 -- возвращает:
@@ -292,6 +297,7 @@ end
 
 -- инициализация.
 -- чтение custom data.
+local stalkers_communities = utils2.get_communities()
 function se_smart_terrain:read_params()
   local ini  = self:spawn_ini()
   local sect = "smart_terrain"
@@ -301,7 +307,7 @@ function se_smart_terrain:read_params()
 
     if not ini:section_exist( sect ) then
 --      abort( "[smart_terrain %s] no configuration!", self:name() )
-      -- printf( "[smart_terrain %s] no configuration!", self:name() )
+      log( "! [smart_terrain %s] no configuration!", self:name() )
       self.disabled = true
       return
     end
@@ -347,18 +353,21 @@ function se_smart_terrain:read_params()
     gp.groups = parse_nums( gp.groups )
   end
 
-  self.accepted_communities = nil
+	self.accepted_communities = nil
 
-  local t = r_str( ini, sect, "communities", nil, override_sect )
-  if t then
-    t = parse_names( t )
+	local t = r_str( ini, sect, "communities", nil, override_sect )
+	if t then
+		t = parse_names( t )
 
-    self.accepted_communities = {}
+		self.accepted_communities = {}
 
-    for i, v in ipairs( t ) do
-      self.accepted_communities[v] = true
-    end
-  end
+		for i, v in ipairs( t ) do
+			self.accepted_communities[v] = true
+			if self.for_stalkers == nil then
+				self.for_stalkers = (stalkers_communities[v] ~= nil)
+			end
+		end
+	end
 
 --  local ltx = system_ini()
 
@@ -450,9 +459,8 @@ function se_smart_terrain:smart_terrain_accepts_obj( obj, obj_agreement )
 	then
 		if not smart_confusion then
 			--' Проверка что смарттеррейн и НПС находятся в одном кластере уровней (чтобы не ходили через БАР)
-			local smart_level_group = object_level_name(self)
 			local npc_level_group = object_level_name(obj)
-			if level_groups[smart_level_group] ~= level_groups[npc_level_group] then
+			if level_groups[self.level_name] ~= level_groups[npc_level_group] then
 				return false
 			end
 		end
@@ -544,10 +552,12 @@ function se_smart_terrain:enabled(obj)
   --------
   self:register_if_needed()
   self:initialize_if_needed()
+  self.checked_obj_exclusive = nil
 
   if self:is_gulag_available() and not self.population_locked then
     local b = self:obj_accepts_smart_terrain( obj )
     local a = self:smart_terrain_accepts_obj( obj, b )
+	self.checked_obj_exclusive = (b == agreed_exclusive)
 
 --'   if obj:name() == "esc_wolf" then
 --'     if a == true then
@@ -576,17 +586,23 @@ end
 -- TODO Оптимизировать
 function se_smart_terrain:suitable( obj )
 	local v = 0
-
 	--' Повысить подходящесть эксклюзивного смарттеррейна
-	if self:obj_accepts_smart_terrain(obj) == agreed_exclusive then
+--	if self:obj_accepts_smart_terrain(obj) == agreed_exclusive then
+	if self.checked_obj_exclusive then
 		v = 100000 --'Так чтобы все эксклюзивные были заведомо лучше
 	end
-
-	for id, strn in pairs( smart_terrains[ object_level_name(self) ] ) do
-		if strn:is_gulag_available() then
-			v = v + strn.gulag.capacity - strn.gulag:get_population()
+	self.checked_obj_exclusive = nil
+	
+	local p, n = 0, 0
+	local community, is_stalker = self:get_obj_community( obj )
+	for id, strn in pairs( smart_terrains[ self.level_name ] ) do
+		if strn:is_gulag_available() and (strn.for_stalkers==nil or is_stalker == strn.for_stalkers) then
+			p = p + strn.gulag:get_population()
+			n = n + strn.gulag.capacity
+		--	v = v + strn.gulag.capacity - strn.gulag:get_population()
 		end
 	end
+	v = v + math.floor( 100*(n-p)/n )
 
 	return v
 end
@@ -865,17 +881,17 @@ function se_smart_terrain:register_if_needed()
     return
   end
 
-  local level_name = object_level_name(self)
+  self.level_name = object_level_name(self)
 
   if not self.gparams.preset_name then
-    self.gparams.preset_name = level_name
+    self.gparams.preset_name = self.level_name
   end
 
-  if not smart_terrains[level_name] then
-    smart_terrains[level_name] = {}
+  if not smart_terrains[self.level_name] then
+    smart_terrains[self.level_name] = {}
   end
 
-  smart_terrains[level_name][self.id] = self
+  smart_terrains[self.level_name][self.id] = self
   smart_terrains_by_name[self:name()] = self
 
   if self.gparams.respawn then
@@ -903,7 +919,7 @@ function se_smart_terrain:on_unregister()
 
 --  printf( "[smart_terrain %s] on_unregister called", self:name() )
 
-  local lvl_smarts = smart_terrains[ object_level_name(self) ]
+  local lvl_smarts = smart_terrains[ self.level_name ]
 
   if lvl_smarts then
     lvl_smarts[self.id] = nil
@@ -968,7 +984,7 @@ end
 
 -- вывод статистики смарта
 function se_smart_terrain:stat()
-  local s = object_level_name(self) .. " " .. self:name()
+  local s = self.level_name .. " " .. self:name()
 
   local pop   = self.gulag:get_population()
   local cap   = self.gulag.capacity
@@ -983,7 +999,7 @@ function se_smart_terrain:stat()
 
   s = s .. pop .. " " .. cap .. " " .. self:stat_get_accepted_communities()
 
-  printf( s )
+  log( s )
 
 --  for id, npc_info in pairs( self.npc_info ) do
 --    printf( "    %s", npc_info.name )
@@ -1001,7 +1017,7 @@ function se_smart_terrain:update()
 	cse_alife_smart_zone.update( self )
 
        -- barin start
---	smart_debug.ShowSmartInfo(self.id, self:name(), self:is_gulag_available(), self.gulag_working, object_level_name(self),
+--	smart_debug.ShowSmartInfo(self.id, self:name(), self:is_gulag_available(), self.gulag_working, self.level_name,
 --		r_str(self:spawn_ini(), "smart_terrain", "communities"), r_str(self:spawn_ini(), "smart_terrain", "cond"))
 	-- barin end
 	if not self.gulag_working then
