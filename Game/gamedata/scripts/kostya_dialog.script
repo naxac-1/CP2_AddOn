@@ -1896,18 +1896,21 @@ local unbind_comms = {
 	["jump"]       = key_bindings.kJUMP,
 	["quick_load"] = key_bindings.kQUICK_LOAD
 }
-function kill_online_kontroller()
+function kill_online_kontroller(no_msg)
 	if se_monster.off_online_kontroller then
-		return false
+		return true
 	end
 
 	local result = false
 	for id,obj in pairs(db.creatures) do
 		if obj and obj:clsid() == clsid.controller_s and obj:alive() then
 			se_monster.off_online_kontroller = true
-			-- news_manager.send_tip("kill_online_kontroller", nil, "nano", 30000)
-			result = true
-			break
+			if no_msg then
+				return true
+			else
+				result = true
+				break
+			end
 		end
 	end
 

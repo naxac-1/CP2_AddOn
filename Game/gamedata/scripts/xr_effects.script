@@ -2733,7 +2733,7 @@ end
 function strelok_taynik_pda1_found()
 	if not has_alife_info("strelok_taynik_stop") then 
 		Actor:give_info_portion("strelok_taynik_pda1_found")
-		kostya_dialog.kill_online_kontroller()
+		kostya_dialog.kill_online_kontroller(true)
 	end
 end
 function strelok_taynik_pda1_3_1_sr1_found()
@@ -2813,7 +2813,7 @@ function kostya_taynik_pda1_found()
 	obj = AI:create_free("t_inventory_box1_3",vector():set(90.678909301758,5.4578070640564,42.393135070801),201451,2222)
 	obj = AI:create_free("t_inventory_box1_2",vector():set(43.849678039551,2.2733302116394,30.84397315979),155625,2225)
 	taynik_spawn.t_new_inventory1_1()
-	kostya_dialog.kill_online_kontroller()
+	kostya_dialog.kill_online_kontroller(true)
 	Actor:give_info_portion("kostya_taynik_pda1_found")
 end
 
