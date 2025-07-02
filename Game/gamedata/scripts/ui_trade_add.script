@@ -65,13 +65,17 @@ function TradeWnd:DetachWnd()
 end
 
 function on_net_spawn()
-	wnd = TradeWnd( level.get_trade_wnd() )
+	local trade_wnd = level.get_trade_wnd()
+	if trade_wnd then
+		wnd = TradeWnd( trade_wnd )
+	end
 end
 function on_net_destroy()
-	if wnd then
+	local trade_wnd = level.get_trade_wnd()
+	if trade_wnd and wnd then
 		wnd:DetachWnd()
-		wnd = nil
 	end
+	wnd = nil
 end
 
 function attach()
