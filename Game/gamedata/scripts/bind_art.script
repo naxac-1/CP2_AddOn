@@ -25,7 +25,6 @@ function art_binder:update( delta )
 		local se_obj = AI:object( self.object:id() )
 		if se_obj then
 			self:set_art_loss(se_obj.art_loss)
-			self.need_update_art_loss = nil
 		end
 	end
 end
@@ -34,6 +33,11 @@ function art_binder:net_spawn( obj )
 	if not object_binder.net_spawn( self, obj ) then return false end
 
 	bind_det_arts.add_artefact( self.object:id(), self.object:section() )
+
+	local se_obj = AI:object( self.object:id() )
+	if se_obj then
+		self:set_art_loss(se_obj.art_loss)
+	end
 
 	return true 
 end
@@ -47,6 +51,8 @@ function art_binder:net_destroy()
 end
 
 function art_binder:set_art_loss(loss)
+--	log("[art_binder:set_art_loss] %s :: %s", self.object:section(), tostring(loss))
+	self.need_update_art_loss = nil
 	if (not loss) or loss == 0 then return end
 
 	local cond = 1 - loss
