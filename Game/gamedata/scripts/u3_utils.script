@@ -177,10 +177,14 @@ function load_quicksave()
 		return
 	end
 
-	if old_user_name() == user_name() then return end
+	if old_user_name() == user_name() then
+		_G.destroy_level = true
+		return
+	end
 
 	local save_name = user_name().."_quicksave"
 	if getFS():exist( "$game_saves$", save_name..".sav" ) then
+		_G.destroy_level = true
 		get_console():execute( "load "..save_name )
 	end
 end

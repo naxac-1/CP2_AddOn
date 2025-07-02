@@ -159,6 +159,7 @@ function after_credits()
 	db.gameover_credits_started = nil
 
 	if not has_alife_info("snp_rings_done") then
+		_G.destroy_level = true
 		get_console():execute("main_menu on")
 		get_console():execute("disconnect")
 		return

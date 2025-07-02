@@ -364,6 +364,7 @@ function load_save_dialog:load_game_internal(fname)
 	
 	ui_mm_opt_add.check_options()
 	
+	_G.destroy_level = true
 	if (alife() == nil) then
 		console:execute	("disconnect")	
 		console:execute	("start server(" .. fname .. "/single/alife/load) client(localhost)")	

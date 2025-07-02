@@ -2111,6 +2111,7 @@ function after_credits(actor, npc)
 	if db.gameover_credits_started ~= true then
 		return
 	end
+	_G.destroy_level = true
 	local c = get_console()
 	c:execute("disconnect")
 end

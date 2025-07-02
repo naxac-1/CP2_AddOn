@@ -161,7 +161,7 @@ function weapon_manager:update()
 		then
 --			printw("update[%s]: cwpn parent ~= npc(%s)",self.npc:character_name(),tostring(self.npc_id))
 --			printw("info[%s]:se=[%s],box=[%s],prstor=[%s],parent=[%s]",cwpn:name(),tostring(AI:object(self.weapon_id)~=nil),tostring((parent and parent:id())==boxid),tostring(self.wpns_prstor[id]),tostring(parent and parent:id()))
-			if self.wpns_prstor[id] then
+			if self.wpns_prstor[self.weapon_id] then
 --				printw("update[%s]:return from prstor (%s)",self.npc:character_name(),tostring(self.weapon_id))
 				self:return_items(self.weapon_id)
 --			elseif (parent and parent:id()) == boxid then
@@ -705,16 +705,17 @@ function weapon_manager:process_item(obj)
 	end
 end
 
-function weapon_manager:return_items(id)
+function weapon_manager:return_items(obj_id)
 	if not self.npc then
 --		printw("return_items:not self.npc")
 		return
 	end
- if has_alife_info("boss_talk_start") then 
-    if self.npc:name()=="bodi_pantera2" or self.npc:name()=="bodi_pantera1" or self.npc:name()=="pantera" then 
-      return 
-    end 
-  end
+	if has_alife_info("boss_talk_start") then 
+		if self.npc:name()=="bodi_pantera2" or self.npc:name()=="bodi_pantera1" or self.npc:name()=="pantera" then 
+			return 
+		end 
+	end
+
 	local function transfer_to_npc(id)
 		local box = get_box()
 		if not box then
@@ -769,11 +770,11 @@ function weapon_manager:return_items(id)
 			end
 		end
 	end
-	if id then
-		if self.wpns_prstor[id] then
+	if obj_id then
+		if self.wpns_prstor[obj_id] then
 --			printf("return_items[%s]:by id[%s]", self.npc:character_name(),tostring(id))
-			transfer_to_npc(id)
-			self.wpns_prstor[id] = nil
+			transfer_to_npc(obj_id)
+			self.wpns_prstor[obj_id] = nil
 		end
 		return
 	end
@@ -867,7 +868,9 @@ end
 function kill_wm(obj)
 	local st = db.storage[obj:id()]
 	if st and st.wm ~= nil then
-		get_wm(obj):return_items()
+		if _G.destroy_level == nil then
+			get_wm(obj):return_items()
+		end
 		clear_wms(obj:id())
 	end
 end

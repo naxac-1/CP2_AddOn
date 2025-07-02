@@ -161,6 +161,7 @@ function main_menu:OnButton_disconnect_clicked()
 end
 
 function main_menu:OnMessageQuitGame()
+	_G.destroy_level = true
 	local console = get_console()
 	console:execute("disconnect")
 end
@@ -210,6 +211,7 @@ function main_menu:StartGame()
 	local console = get_console()
 	
 	if (AI ~= nil) then
+		_G.destroy_level = true
 		console:execute	("disconnect")	
 	end
 	

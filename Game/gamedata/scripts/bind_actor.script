@@ -736,8 +736,10 @@ function actor_binder:save(packet)
 		Actor:give_info_portion("acv_real_fail")
 	end
 
+	local lc = false
 	if utils.level_changing() then
 		Actor:give_info_portion("level_changing")
+		lc = true
 		if not has_alife_info("teleport_started") then
 			archievements.acv_count_event("acv_skit", 300)
 		end
@@ -745,7 +747,7 @@ function actor_binder:save(packet)
 	end
 	
 	rx_ai.actor_save()
-	
+
 --	local pk1=fake_netpk.fake_net_packet()
 --	self:save_old(pk1)
 --	amk.mylog("Packet size is "..pk1:w_tell())
@@ -768,6 +770,11 @@ function actor_binder:save(packet)
 
 	self:save_old(packet)
 --	self.is_saved = true
+	if lc then
+		_G.destroy_level = true
+	else
+		_G.destroy_level = nil
+	end
 end
 
 
