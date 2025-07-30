@@ -430,13 +430,13 @@ end
 ----------------------------------------------------------------------------------------------------------------------
 _G.scopeUsed = false
 function actor_binder:update(delta)
-	local time = time_global()
+	local time_ms = time_global()
 	local actor = self.object
 
 	_G['actor_active_item'] = actor:active_item()
 	_G['actor_outfit'] = actor:get_current_outfit()
 
-	_G['real_time_ms'] = time
+	_G['real_time_ms'] = time_ms
 	_G['game_time_ms'] = amk.game_milliseconds()
 	_G['game_time_minutes'] = amk.game_minutes()
 	_G['game_time_hours'] = amk.game_hours()
@@ -476,7 +476,7 @@ function actor_binder:update(delta)
 			end
 		end
 		if actor:dont_has_info("acv_giv") then
-			self.no_load_time = time+9*60*60*1000/level.get_time_factor()
+			self.no_load_time = time_ms+9*60*60*1000/level.get_time_factor()
 		end
 		
 		self.bCheckStart = nil
@@ -489,17 +489,17 @@ function actor_binder:update(delta)
 	hud_items.update()
 
 	amk.oau_watchdog=3011
-	self:rotting() -- гниение тупов
+	self:rotting(time_ms) -- гниение тупов
 	
 	amk.oau_watchdog=3001
-	if upd_time4 < time then
+	if upd_time4 < time_ms then
 	--	log1("upd_time4: "..delta)
-		upd_time4 = time + 30000
+		upd_time4 = time_ms + 30000
 		amk.oau_watchdog=301
 
 		if self.no_load_time
 			and actor:dont_has_info("acv_giv")
-			and self.no_load_time < time
+			and self.no_load_time < time_ms
 		then
 			archievements.send_archievement("acv_giv")
 			self.no_load_time = nil
@@ -510,9 +510,9 @@ function actor_binder:update(delta)
 		elseif actor:dont_has_info("acv_stay2") and amk.game_days() > 365 then
 			archievements.send_archievement("acv_stay2")
 		end
-	elseif upd_time3 < time then
+	elseif upd_time3 < time_ms then
 	--	log1("upd_time3: "..delta)
-		upd_time3 = time + 5000
+		upd_time3 = time_ms + 5000
 
 		amk.oau_watchdog=302
 		sak.nepis_umer()
@@ -520,9 +520,9 @@ function actor_binder:update(delta)
 		braad_test.grib_respawn()
 		amk.oau_watchdog=19396
 		amk_alcohol.update()
-	elseif upd_time2 < time then
+	elseif upd_time2 < time_ms then
 	--	log1("upd_time2: "..delta)
-		upd_time2 = time + 1000
+		upd_time2 = time_ms + 1000
 
 		amk.oau_watchdog=1931
 		meceniy_utils.on_actor_update_callback()
@@ -531,9 +531,9 @@ function actor_binder:update(delta)
 		-- встроенный детектор аномалий
 		amk.oau_watchdog=1934
 		det_suit.update()
-	elseif upd_time1 < time then
+	elseif upd_time1 < time_ms then
 	--	log1("upd_time1: "..delta)
-		upd_time1 = time + 500
+		upd_time1 = time_ms + 500
 
 		amk.oau_watchdog=179
 		babah.update(delta)
@@ -546,9 +546,9 @@ function actor_binder:update(delta)
 		amk.oau_watchdog=183
 		snp.update()
 		amk.oau_watchdog=1831
-	elseif upd_time < time then
+	elseif upd_time < time_ms then
 	--	log1("upd_time: "..delta)
-		upd_time = time + 200
+		upd_time = time_ms + 200
 		
 		amk.oau_watchdog=304
 		if bit_and(actor:get_actor_int(nil, 1480), 1) == 1 then
@@ -644,12 +644,12 @@ function actor_binder:update(delta)
 
 	amk.oau_watchdog=191
 	-- обновление рестрикторов, которые под логикой, срабатывает через интервалы времени
-	if self.next_restrictors_update_time < time then
+	if self.next_restrictors_update_time < time_ms then
 		bind_restrictor.actor_update(delta)
 		
 		-- Апдейтим наш телепорт (Kostya_level)
 		bind_mteleport.actor_update(delta)
-		self.next_restrictors_update_time = time + 200
+		self.next_restrictors_update_time = time_ms + 200
 	end
 
 	amk.oau_watchdog=190
@@ -687,7 +687,7 @@ function actor_binder:update(delta)
 		-- else
 			-- wnd:SetTextST(game.translate_string("amk_warn_attention"))
 		-- end
-	-- elseif self.wt and self.wt<time_global() then
+	-- elseif self.wt and self.wt<time_ms then
 		-- self.wt=nil
 		-- if get_hud():GetCustomStatic("hud_save_warning") then
 			-- get_hud():RemoveCustomStatic("hud_save_warning")
@@ -704,9 +704,9 @@ function actor_binder:update(delta)
 	--проверка зависания биндеров НПЦ и мобов раз в 0,5сек
 	--закомментировано на случай разбора полётов
   if self.upd_time_us == nil then
-    self.upd_time_us = time + 500
-  elseif self.upd_time_us < time then
-    self.upd_time_us = time + 500  
+    self.upd_time_us = time_ms + 500
+  elseif self.upd_time_us < time_ms then
+    self.upd_time_us = time_ms + 500  
     if db and db.storage then
       for k,v in pairs(db.storage) do
         if v.us ~= nil and v.us ~= 0 then
@@ -896,11 +896,11 @@ function actor_binder:on_use_object(obj)
 	xr_s.on_event("item_use", obj)
 end
 
-function actor_binder:rotting()
+function actor_binder:rotting(time_ms)
 	if db.rotting > 0 then
 		if not self.rot then
 			self.rot = {}
-			self.rot.next_sound = time_global()+math.random(4000,6000)
+			self.rot.next_sound = time_ms+math.random(4000,6000)
 			self.rot.sound_id = 0
 			self.rot.prev_sound_id = 0
 			self.rot.effactor = 0.1
@@ -908,14 +908,14 @@ function actor_binder:rotting()
 			level.set_pp_effector_factor(5436, self.rot.effactor)
 		end
 		
-		if self.rot.next_sound < time_global() then
+		if self.rot.next_sound < time_ms then
 			repeat
 				self.rot.sound_id = math.random(1,14)
 			until self.rot.sound_id ~= self.rot.prev_sound_id
 			
 			self.rot.sound = xr_sound.get_safe_sound_object([[rotting\rotting_]]..self.rot.sound_id)
 			self.rot.sound:play(self.object, 0, sound_object.s2d)
-			self.rot.next_sound = time_global()+self.rot.sound:length()+math.random(4000,6000)
+			self.rot.next_sound = time_ms+self.rot.sound:length()+math.random(4000,6000)
 			self.rot.prev_sound_id = self.rot.sound_id
 			
 			if self.rot.effactor < 1 then

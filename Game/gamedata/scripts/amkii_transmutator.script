@@ -192,12 +192,6 @@ function amkDisableDevice()
 	end
 end
 
-function amkUseTransmutator(oItem)
-	if oItem:section() == "amk_transmutator" then 
-		amk.oAmkLauncher:AddFunc("UseTransmutator", "amkii_transmutator.amkEnableDevice(2)")
-	end
-end
-
 function get_anom_name(str)
 	return anomaly_name or "Неизвестно"
 end
@@ -551,7 +545,6 @@ function CAmkDeviceTransmutator:UpdateDevice()
 		end
 		tbl.iSectIndex = nil
 	end
---	amk.oAmkLauncher:AddFunc("UseTransmutator", "amkii_transmutator.amkEnableDevice(2)")
 	self:UpdScrollBar(aInterval[1], aInterval[2], "Inv")
 	self:UpdScrollBar(aRecInterval[1], aRecInterval[2], "Rec")
 end

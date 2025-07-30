@@ -57,7 +57,7 @@ function on_part_take(obj)
 			bind_actor.hide_weapon("monter_parts")
 
 			local t = {
-				timer = time_global() + gd*2000,	--snd:length(),
+				timer = real_time_ms + gd*2000,	--snd:length(),
 				pos = Actor:position(),
 				parent = monster:id()
 			}
@@ -71,9 +71,9 @@ function on_part_take(obj)
 		end
 	else
 		Actor:transfer_item(obj, monster)
-		if dont_take_timer > time_global() then return end
+		if dont_take_timer > real_time_ms then return end
 		level.start_stop_menu(level.main_input_receiver(), true)
-		dont_take_timer = time_global() + 500
+		dont_take_timer = real_time_ms + 500
 		local msg = string.format( game.translate_string("st_parts_hasnt_knife"),
 			game.translate_string( get_inv_name( obj:section() ) ) )
 		ShowMessageBox("ok_alarm", msg, false, false, 2500)
@@ -103,7 +103,7 @@ function on_monster_stop_use()
 end
 
 function check_move(delta, p)
-	if p.timer > time_global() then
+	if p.timer > real_time_ms then
 		local actor_pos = Actor:position()
 		local npc = level.object_by_id(p.parent)
 		if ( npc and (actor_pos:distance_to_sqr(p.pos) > 0.1

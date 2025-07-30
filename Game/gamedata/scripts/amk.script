@@ -13,8 +13,6 @@ local string_len = string.len
 local npc_spawner={}  --служебный массив, работает автоматически - не трогать шаловливыми ручками
 
 convert_npc={}
-g_kick=false
---oAmkLauncher = amkii_launcher.CAmkLauncher()
 local StartTime
 
 is_debug = false
