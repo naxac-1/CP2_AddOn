@@ -155,7 +155,7 @@ local function read_switches(sini, section, override_section, line)
 	elseif sini:line_exist(section, line) then
 		return sini:r_string(section, line)
 	else
-		return ""
+		return nil
 	end
 end
 
@@ -181,8 +181,10 @@ function gulag:initialize()
 		override_sect = nil
 	end
 
-	self.state_switch_0 = xr_logic.parse_condlist( self.smrttrn, sect, "switch_0", read_switches(ini, sect, override_sect, "switch_0") )
-	self.state_switch_1 = xr_logic.parse_condlist( self.smrttrn, sect, "switch_1", read_switches(ini, sect, override_sect, "switch_1") )
+	local sw_str = read_switches(ini, sect, override_sect, "switch_0")
+	if sw_str then self.state_switch_0 = xr_logic.parse_condlist( self.smrttrn, sect, "switch_0", sw_str ) end
+	sw_str = read_switches(ini, sect, override_sect, "switch_1")
+	if sw_str then self.state_switch_1 = xr_logic.parse_condlist( self.smrttrn, sect, "switch_1", sw_str ) end
 
 	self.JobLoaded = nil
 end
