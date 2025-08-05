@@ -1,4 +1,19 @@
 -- -*- mode: lua; encoding: windows-1251 -*-
+function fix_149()
+	local obj = AI:object("sim_stalker_fraer")
+	if (obj == nil) then
+		if not has_alife_info("prapor_talk_need") then
+			AI:create(spawn_ids.sim_stalker_fraer)
+		end
+	elseif AI:story_bject(story_ids.val_fraer) == nil then
+		set_story_id(obj, story_ids.val_fraer)
+	end
+	if AI:story_bject(story_ids.val_kocherga) == nil then
+		obj = AI:object("val_kocherga")
+		if not obj then return end
+		set_story_id(obj, story_ids.val_kocherga)
+	end
+end
 function fix_148()
 	local obj = AI:object("val_prisoner_captive")
 	if obj and obj:alive()

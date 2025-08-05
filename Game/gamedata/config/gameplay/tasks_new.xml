@@ -572,6 +572,8 @@
 	</objective>
 	<objective>
 		<text>bandranen_pda_2</text>
+		<map_location_type hint="bandranen_pda_1_location">crlc_big</map_location_type>
+		<object_story_id>val_fraer</object_story_id>
 		<infoportion_complete>prapor_talk_need</infoportion_complete>
 	</objective>
 	<objective>
