@@ -778,7 +778,7 @@ end
 
 -- розыск
 function akim1_done()
-	snp.create_trup("snp_nolik",vector():set(107.2611618042,0.43980139493942,10.517269134521),407133,117,19918)
+	snp.create_trup("snp_nolik",vector():set(107.2611618042,0.43980139493942,10.517269134521),407133,117,story_ids.snp_nolik)
 end
 
 function kalinin1_done()

@@ -50,7 +50,7 @@ function kotobegemot2_done()
 	AI:create_free("n_inventory_box_uagro2",vector():set(-76.056887817383,5.0370149612427,-71.1019128418),3053,717)
 end
 function kotobegemot3_done()
-	create_trup("suslov_marsh",vector():set(-179.94078063965,-1.9289412498474,-317.0966796875),50507,3365,19910)
+	create_trup("suslov_marsh",vector():set(-179.94078063965,-1.9289412498474,-317.0966796875),50507,3365,story_ids.suslov_marsh)
 	create_restrictor(vector():set(-179.94078063965,-1.9289412498474,-317.0966796875),50507,3365,5,"snp_spawn.suslov_marsh_sms1")
 end
 function kotobegemot4_done()
@@ -243,7 +243,7 @@ function anna4_done()
 end
 
 function ludmila_start_done()
-	create_trup("snp_ucheniy2",vector():set(10.804178237915,37.729103088379,64.052787780762),91279,2575,19919)
+	create_trup("snp_ucheniy2",vector():set(10.804178237915,37.729103088379,64.052787780762),91279,2575,story_ids.snp_ucheniy2)
 end
 function ludmila1_done()
 	local sobj = object_by_section_offline("snp_ucheniy2")
@@ -331,7 +331,7 @@ function bubulyka3_done()
 	create_restrictor(vector():set(225.84899902344,-7.6801772117615,121.92847442627),1103327,3740,5,"snp_spawn.n_inventory_box_jupiter1")
 end
 function bubulyka5_done()
-	create_trup("snp_semetskiy",vector():set(-8.7067518234253,2.8850204944611,-137.86454772949),20691,2993,19912)
+	create_trup("snp_semetskiy",vector():set(-8.7067518234253,2.8850204944611,-137.86454772949),20691,2993,story_ids.snp_semetskiy)
 end
 function bubulyka7_done()
 	AI:create_free("n_inventory_box_zaton5",vector():set(-474.8293762207,49.513092041016,-363.09838867188),307427,3664)
@@ -355,7 +355,7 @@ function ginekolog1_done()
 end
 
 function sakharov1_done()
-	create_trup("snp_ucheniy1",vector():set(150.7462310791,12.494668960571,291.85235595703),66667,2546,19913)
+	create_trup("snp_ucheniy1",vector():set(150.7462310791,12.494668960571,291.85235595703),66667,2546,story_ids.snp_ucheniy1)
 end
 
 function klenov1_done()
@@ -468,7 +468,7 @@ function spawn_bunker_jupiter()
 	if obj then AI:release(obj, true) end
 	obj = object_by_section_offline("anna_zaton")
 	if obj then AI:release(obj, true) end
-	create_trup("fenrir_jupiter",vector():set(-223.81423950195,-2.3742883205414,83.036392211914),335931,3708,19911)
+	create_trup("fenrir_jupiter",vector():set(-223.81423950195,-2.3742883205414,83.036392211914),335931,3708,story_ids.fenrir_jupiter)
 	obj = AI:create("proper70_jupiter",vector():set(-227.50967407227,-3.3744874000549,79.343292236328),331133,3708)
 	set_story_id(obj, story_ids.proper70_jupiter)
 	obj = AI:create("resident_evil_jupiter",vector():set(-223.96179199219,-3.5705282688141,78.559143066406),337165,3708)
