@@ -7,10 +7,6 @@ check_item_tbl['emb_note25'] = function(obj)
 	Actor:give_info_portion("emb14")
 end
 check_item_tbl['snp_almaz_note1'] = function(obj)
-	local sobj = snp.object_by_section_offline("suslov_marsh")
-	if sobj then
-		AI:release(sobj, true)
-	end
 	AI:create_free("snp_almaz_note2",vector():set(30.251602172852,-0.85134720802307,-27.375852584839),139607,2131)
 end
 check_item_tbl['snp_almaz_note3'] = function(obj)
