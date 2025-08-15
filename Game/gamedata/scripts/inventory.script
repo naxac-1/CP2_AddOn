@@ -118,7 +118,7 @@ function item_on_belt(item)
 end
 
 
-local max_belt = sys_ini:r_u32("inventory", "max_belt")
+local max_belt = sys_ini:r_u32("without_outfit", "belt_slots")
 
 function is_free_belt_slot()
 	return Actor:belt_count() < max_belt
