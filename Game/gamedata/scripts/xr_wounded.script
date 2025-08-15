@@ -657,7 +657,7 @@ function help_wounded(npc)
 
 	elseif npc_name == "mil_stalker0012" then		-- Сумасшедший Сталкер
 		if not has_alife_info("psih_flash_enemy") then
-			relation_registry.set_goodwill(npc:id(), Actor:id(), 3500)
+			relation_registry.set_goodwill(npc:id(), Actor:id(), 2500)
 		end
 		return
 	end

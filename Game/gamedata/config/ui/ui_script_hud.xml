@@ -23,7 +23,7 @@
 
 	<body_state x="153" y="179" width="30" height="33" stretch="1" />
 
-	<static_torch  x="39" y="33" width="9" height="110">
+	<static_torch  x="39" y="33" width="9" height="110" stretch="1">
 		<texture>ui_hud_shkala_torch</texture>
 	</static_torch>
 	<torch_progress x="2" y="5" width="5" height="100" horz="0" min="0" max="100" pos="0">
