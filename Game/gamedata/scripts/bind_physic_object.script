@@ -36,13 +36,13 @@ local function physics_position_fix(obj)
 			se_obj.m_game_vertex_id
 		)
 		new_obj.angle = se_obj.angle
-		local data = {}
-		for _, k in ipairs( {
-			"fixed_bones", "mass", "physic_type", "visual_name", "custom_data"
-		} ) do
-			data[k] = data_old[k]
-		end
-		netpk:modify(new_obj, data)
+		-- local data = {}
+		-- for _, k in ipairs( {
+			-- "fixed_bones", "mass", "physic_type", "visual_name", "custom_data"
+		-- } ) do
+			-- data[k] = data_old[k]
+		-- end
+		netpk:modify(new_obj, data_old)
 		new_obj = AI:object(new_obj.id)
 		new_obj:use_ai_locations(false)
 		-- level.map_add_object_spot(new_obj.id, "red_location", new_obj:name())
